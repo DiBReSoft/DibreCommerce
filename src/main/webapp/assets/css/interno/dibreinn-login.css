@@ -1,0 +1,109 @@
+/* 
+    Created on : 23/08/2015, 22:02:29
+    Author     : jSilverize
+*/
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:300);
+
+/*LOCK SCREEN CONF*/
+
+section {
+  padding: 40px 0px;
+}
+
+.logo-dibreinn img {
+  width: 65px;
+  height: 65px;
+}
+
+.logo-dibreinn h3 {
+  margin-top: 0px;
+  padding-top: 0px;
+  color: rgba(234, 234, 234, 0.8);
+}
+
+#showtime {
+  font-family: 'Roboto';
+  display: inline-block;
+  width: 100%;
+  padding: 100px 15px;
+  color: #fff;
+  text-shadow: 1px 2px 0px #767979;
+  font-size: 200px;
+  line-height: 100px;
+  text-align: right;
+}
+
+@media(max-width: 919px) {
+  #showtime {
+    font-size: 150px;
+    text-align: center;
+  }
+}
+
+@media(max-width: 467px) {
+  #showtime {
+    font-size: 100px;
+    text-align: center;
+    padding: 40px 15px 0px 10px;
+  }
+}
+
+.lock-panel {
+  min-height: 240px;
+  max-width: 300px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 15px;
+  text-align: center;
+  border-radius: 5px;
+  color: #555;
+  background-color: #f4f4f4;
+  box-shadow: 0px 1px 3px rgba(0,0,0,0.5);
+}
+
+.lock-panel-header {
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: 100;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(0,0,0,0.15);
+}
+
+.lock-panel-body {
+  padding: 30px 0px 5px 0px;
+}
+
+.lock-panel-body form,
+.lock-panel-body .form-group:last-of-type {
+  margin-bottom: 0px;
+}
+.lock-panel-body label {
+  white-space: nowrap;
+}
+
+footer {
+  width: 100% !important;
+  left: 0;
+  right: 0;
+  margin-top: 25px;
+  padding: 5px 15px;
+  color: rgba(255,255,255,0.5);
+  background-color: rgba(0,0,0,0.25);
+}
+
+footer a {
+  color: #fff;
+}
+
+@media(min-width: 768px) {
+  footer .creditos:last-of-type {
+    text-align: right;
+  }
+}
+
+@media(max-width: 767px) {
+  footer .creditos:last-of-type {
+    padding-top: 10px;
+  }
+}

@@ -1,0 +1,54 @@
+body {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.navbar .nav.navbar-right > li:last-of-type {
+  margin-right: 15px !important;
+}
+
+[data-target="#selecionarTema"] {
+  cursor: pointer;
+}
+
+aside.side-menu, main.side-content {
+  float: left;
+}
+
+aside.side-menu {
+  width: 20%;
+  background-color: rgba(0,0,0,0.15);
+}
+main.side-content {
+  width: 80%;
+}
+
+aside.side-menu .list-group .list-group-item {
+  border-radius: 0 !important;
+}
+
+@media(min-width: 768px) {
+  aside.side-menu .list-group .list-group-item i.fa {
+    float: left;
+    font-size: 20px;
+    margin: 0px 6px 0px 0px;
+    padding: 12px 4px 11px 0px;
+    border-right: 1px solid;
+  }
+}
+
+footer {
+  padding: 20px 0px;
+}
+
+#temaModal .carousel-indicators {
+  background-color: rgba(0,0,0,0.25);
+}
+
+#temaModal .carousel-inner .item {
+  padding-bottom: 70px;
+}
+
+#temaModal .carousel-inner .carousel-caption{
+  bottom: -15px !important;
+}

@@ -1,0 +1,307 @@
+<!-- Modal para seleção de Tema do Sistema -->
+<div class="modal fade" id="temaModal" tabindex="-1" role="dialog" aria-labelledby="temaModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+          <span aria-hidden="true">
+            <i class="fa fa-times"></i>
+          </span>
+        </button>
+        <h3 class="modal-title" id="temaModalLabel">
+          Escolher Tema do Sistema
+          <small>
+            <br />
+            Personalize a <strong>sua</strong> área de trabalho ao seu gosto
+          </small>
+        </h3>
+      </div>
+
+      <div class="modal-body text-center">
+
+        <h4>
+          1. Selecionar o Tema base
+        </h4>
+
+        <div class="alert ale hidden" id="msgResultadoOperacaoTema">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">
+              <i class="fa fa-times"></i>
+            </span>
+          </button>
+          <span></span>
+        </div>
+
+        <div id="carouselTemas" class="carousel slide" data-ride="carousel">
+
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner" role="listbox">
+            
+            <div class="item active">
+              <img src="/DibreCommerce/assets/img/themes/thumbnail-cerulean.png" 
+                   alt="cerulean">
+              <div class="carousel-caption">
+                <p>
+                  <button type="button" class="btn btn-block btn-primary btn-toggle-theme"
+                          data-loading-text="Carregando..." data-autocomplete="off"
+                          data-theme-url="/DibreCommerce/assets/css/bootstrap-bootswatch-cerulean.css">
+                    Aplicar Tema
+                  </button>
+                </p>
+              </div>
+            </div>
+            
+            <div class="item">
+              <img src="/DibreCommerce/assets/img/themes/thumbnail-cosmo.png" 
+                   alt="cosmo">
+              <div class="carousel-caption">
+                <p>
+                  <button type="button" class="btn btn-block btn-primary btn-toggle-theme"
+                          data-loading-text="Carregando..." data-autocomplete="off"
+                          data-theme-url="/DibreCommerce/assets/css/bootstrap-bootswatch-cosmo.css">
+                    Aplicar Tema
+                  </button>
+                </p>
+              </div>
+            </div>
+            
+            <div class="item">
+              <img src="/DibreCommerce/assets/img/themes/thumbnail-cyborg.png" 
+                   alt="cyborg">
+              <div class="carousel-caption">
+                <p>
+                  <button type="button" class="btn btn-block btn-primary btn-toggle-theme"
+                          data-loading-text="Carregando..." data-autocomplete="off"
+                          data-theme-url="/DibreCommerce/assets/css/bootstrap-bootswatch-cyborg.css">
+                    Aplicar Tema
+                  </button>
+                </p>
+              </div>
+            </div>
+            
+            <div class="item">
+              <img src="/DibreCommerce/assets/img/themes/thumbnail-darkly.png" 
+                   alt="darkly">
+              <div class="carousel-caption">
+                <p>
+                  <button type="button" class="btn btn-block btn-primary btn-toggle-theme"
+                          data-loading-text="Carregando..." data-autocomplete="off"
+                          data-theme-url="/DibreCommerce/assets/css/bootstrap-bootswatch-darkly.css">
+                    Aplicar Tema
+                  </button>
+                </p>
+              </div>
+            </div>
+            
+            <div class="item">
+              <img src="/DibreCommerce/assets/img/themes/thumbnail-flaty.png" 
+                   alt="flaty">
+              <div class="carousel-caption">
+                <p>
+                  <button type="button" class="btn btn-block btn-primary btn-toggle-theme"
+                          data-loading-text="Carregando..." data-autocomplete="off"
+                          data-theme-url="/DibreCommerce/assets/css/bootstrap-bootswatch-flaty.css">
+                    Aplicar Tema
+                  </button>
+                </p>
+              </div>
+            </div>
+            
+            <div class="item">
+              <img src="/DibreCommerce/assets/img/themes/thumbnail-journal.png" 
+                   alt="journal">
+              <div class="carousel-caption">
+                <p>
+                  <button type="button" class="btn btn-block btn-primary btn-toggle-theme"
+                          data-loading-text="Carregando..." data-autocomplete="off"
+                          data-theme-url="/DibreCommerce/assets/css/bootstrap-bootswatch-journal.css">
+                    Aplicar Tema
+                  </button>
+                </p>
+              </div>
+            </div>
+            
+            <div class="item">
+              <img src="/DibreCommerce/assets/img/themes/thumbnail-lumen.png" 
+                   alt="lumen">
+              <div class="carousel-caption">
+                <p>
+                  <button type="button" class="btn btn-block btn-primary btn-toggle-theme"
+                          data-loading-text="Carregando..." data-autocomplete="off"
+                          data-theme-url="/DibreCommerce/assets/css/bootstrap-bootswatch-lumen.css">
+                    Aplicar Tema
+                  </button>
+                </p>
+              </div>
+            </div>
+            
+            <div class="item">
+              <img src="/DibreCommerce/assets/img/themes/thumbnail-paper.png" 
+                   alt="paper">
+              <div class="carousel-caption">
+                <p>
+                  <button type="button" class="btn btn-block btn-primary btn-toggle-theme"
+                          data-loading-text="Carregando..." data-autocomplete="off"
+                          data-theme-url="/DibreCommerce/assets/css/bootstrap-bootswatch-paper.css">
+                    Aplicar Tema
+                  </button>
+                </p>
+              </div>
+            </div>
+            
+            <div class="item">
+              <img src="/DibreCommerce/assets/img/themes/thumbnail-readable.png" 
+                   alt="readable">
+              <div class="carousel-caption">
+                <p>
+                  <button type="button" class="btn btn-block btn-primary btn-toggle-theme"
+                          data-loading-text="Carregando..." data-autocomplete="off"
+                          data-theme-url="/DibreCommerce/assets/css/bootstrap-bootswatch-readable.css">
+                    Aplicar Tema
+                  </button>
+                </p>
+              </div>
+            </div>
+            
+            <div class="item">
+              <img src="/DibreCommerce/assets/img/themes/thumbnail-sandstone.png" 
+                   alt="sandstone">
+              <div class="carousel-caption">
+                <p>
+                  <button type="button" class="btn btn-block btn-primary btn-toggle-theme"
+                          data-loading-text="Carregando..." data-autocomplete="off"
+                          data-theme-url="/DibreCommerce/assets/css/bootstrap-bootswatch-sandstone.css">
+                    Aplicar Tema
+                  </button>
+                </p>
+              </div>
+            </div>
+            
+            <div class="item">
+              <img src="/DibreCommerce/assets/img/themes/thumbnail-simplex.png" 
+                   alt="simplex">
+              <div class="carousel-caption">
+                <p>
+                  <button type="button" class="btn btn-block btn-primary btn-toggle-theme"
+                          data-loading-text="Carregando..." data-autocomplete="off"
+                          data-theme-url="/DibreCommerce/assets/css/bootstrap-bootswatch-simplex.css">
+                    Aplicar Tema
+                  </button>
+                </p>
+              </div>
+            </div>
+            
+            <div class="item">
+              <img src="/DibreCommerce/assets/img/themes/thumbnail-slate.png" 
+                   alt="slate">
+              <div class="carousel-caption">
+                <p>
+                  <button type="button" class="btn btn-block btn-primary btn-toggle-theme"
+                          data-loading-text="Carregando..." data-autocomplete="off"
+                          data-theme-url="/DibreCommerce/assets/css/bootstrap-bootswatch-slate.css">
+                    Aplicar Tema
+                  </button>
+                </p>
+              </div>
+            </div>
+            
+            <div class="item">
+              <img src="/DibreCommerce/assets/img/themes/thumbnail-spacelab.png" 
+                   alt="spacelab">
+              <div class="carousel-caption">
+                <p>
+                  <button type="button" class="btn btn-block btn-primary btn-toggle-theme"
+                          data-loading-text="Carregando..." data-autocomplete="off"
+                          data-theme-url="/DibreCommerce/assets/css/bootstrap-bootswatch-spacelab.css">
+                    Aplicar Tema
+                  </button>
+                </p>
+              </div>
+            </div>
+            
+            <div class="item">
+              <img src="/DibreCommerce/assets/img/themes/thumbnail-superhero.png" 
+                   alt="superhero">
+              <div class="carousel-caption">
+                <p>
+                  <button type="button" class="btn btn-block btn-primary btn-toggle-theme"
+                          data-loading-text="Carregando..." data-autocomplete="off"
+                          data-theme-url="/DibreCommerce/assets/css/bootstrap-bootswatch-superhero.css">
+                    Aplicar Tema
+                  </button>
+                </p>
+              </div>
+            </div>
+            
+            <div class="item">
+              <img src="/DibreCommerce/assets/img/themes/thumbnail-united.png" 
+                   alt="united">
+              <div class="carousel-caption">
+                <p>
+                  <button type="button" class="btn btn-block btn-primary btn-toggle-theme"
+                          data-loading-text="Carregando..." data-autocomplete="off"
+                          data-theme-url="/DibreCommerce/assets/css/bootstrap-bootswatch-united.css">
+                    Aplicar Tema
+                  </button>
+                </p>
+              </div>
+            </div>
+            
+            <div class="item">
+              <img src="/DibreCommerce/assets/img/themes/thumbnail-yeti.png" 
+                   alt="yeti">
+              <div class="carousel-caption">
+                <p>
+                  <button type="button" class="btn btn-block btn-primary btn-toggle-theme"
+                          data-loading-text="Carregando..." data-autocomplete="off"
+                          data-theme-url="/DibreCommerce/assets/css/bootstrap-bootswatch-yeti.css">
+                    Aplicar Tema
+                  </button>
+                </p>
+              </div>
+            </div>
+            
+          </div>
+
+          <!-- Controls -->
+          <a class="left carousel-control" href="#carouselTemas" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Próximo</span>
+          </a>
+          <a class="right carousel-control" href="#carouselTemas" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Anterior</span>
+          </a>
+        </div>
+
+
+      </div>
+
+      <div class="modal-footer">
+
+        <div class="row">
+
+          <div class="col-md-3 col-sm-4">
+            <button type="button" class="btn btn-block btn-default btn-toggle-theme"
+                    data-dismiss="modal"
+                    data-theme-url="/DibreCommerce/assets/css/bootstrap.css">
+              Padrão
+            </button>
+          </div>
+
+          <div class="col-md-6 col-sm-4"></div>
+
+          <div class="col-md-3 col-sm-4">
+            <button type="button" class="btn btn-block btn-success btn-save-theme disabled">
+              Salvar
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- Modal para seleção de Tema do Sistema -->
