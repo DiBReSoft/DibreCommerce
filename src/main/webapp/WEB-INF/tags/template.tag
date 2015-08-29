@@ -21,7 +21,7 @@
     <link rel="icon" href="/assets/favicon.ico">
 
     <!-- CSS Base -->
-    <link rel="stylesheet" type="text/css" href="<c:url value="/assets/css/bootstrap-bootswatch-paper.css" />" />
+    <link rel="stylesheet" type="text/css" href="<c:url value="/assets/css/bootstrap-bootswatch-cerulean.css" />" />
     <link rel="stylesheet" type="text/css" href="<c:url value="/assets/css/dibreinn-ecommerce.css" />" />
     <link rel="stylesheet" type="text/css" href="<c:url value="/assets/css/font-awesome-4.4.0.min.css" />" />
 
