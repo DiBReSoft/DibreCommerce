@@ -5,10 +5,10 @@
      class="list-group-item active">
     
     <!-- ícone do Font-Awesome -->
-    <i class="fa fa-fw fa-building"></i>
+    <i class="fa fa-fw fa-dashboard"></i>
     
     <h4 class="list-group-item-heading">
-      Início
+      Painel
     </h4>
     <p class="list-group-item-text hidden-sm hidden-xs">
       Breve descrição
