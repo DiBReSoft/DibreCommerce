@@ -52,3 +52,44 @@ footer {
 #temaModal .carousel-inner .carousel-caption{
   bottom: -15px !important;
 }
+
+.painel-opcoes .thumbnail:hover {
+  text-decoration: none !important;
+}
+
+.thumbnail-icon {
+  margin: 0;
+  padding: 15px 0px 0px 0px;
+}
+
+.thumbnail-title {
+  margin: 0;
+  padding: 10px 0px;
+  min-height: 55px;
+}
+.thumbnail-title * {
+  margin: 0;
+}
+
+.thumbnail-description {
+  margin: 0;
+  padding: 0px 0px 15px 0px;
+  min-height: 73px;
+}
+
+.thumbnail-description * {
+  margin: 0;
+}
+
+.rolar-topo {
+  cursor: pointer;
+  display: inline-block;
+  padding: 5px 10px 7px 10px;
+  transition: 0.2s;
+  border-radius: 4px;
+}
+
+.rolar-topo:hover {
+  text-decoration: none;
+  background-color: rgba(0,0,0,0.15);
+}

@@ -18,7 +18,7 @@
       <div class="col-sm-4 col-xs-6">
 
         <p class="text-right">          
-          <a href="#navbar-principal"
+          <a class="rolar-topo"
              title="Rolar página para cima">
             Voltar ao topo
             <i class="fa fa-fw fa-chevron-up"></i>

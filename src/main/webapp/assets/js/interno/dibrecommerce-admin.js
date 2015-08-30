@@ -12,8 +12,11 @@ document.addEventListener("resize", function () {
 // DESTE BLOCO
 $(document).ready(function () {
 
-  igualarMarcaComMenuLateral();
-  $(window).resize(igualarMarcaComMenuLateral);
+  /* Voltar ao topo */
+  $(".rolar-topo").click(function () {
+    var body = $("html, body");
+    body.animate({scrollTop: 0}, '500', 'swing');
+  });
 
   alterarTema();
 
@@ -28,23 +31,6 @@ $(window).load(function () {
   // inserir código aqui
 
 });
-
-// para ajustar as medidas entre menu lateral e o logo do sistema na navbar
-function igualarMarcaComMenuLateral() {
-
-  var larguraMenuLateral = $("aside.side-menu").innerWidth() - 15;
-  $(".navbar-header").css("min-width", larguraMenuLateral + "px");
-
-  var alturaMenuLateral;
-  if (telaAltura > $("main.side-content").innerHeight()) {
-    alturaMenuLateral = telaAltura - $(".navbar").innerHeight();
-  } else {
-    alturaMenuLateral = $("main.side-content").innerHeight();
-  }
-
-  $("aside.side-menu").css("min-height", alturaMenuLateral + "px");
-
-}
 
 // para alterar o tema do sistema conforme a vontade do usuário
 function alterarTema() {
