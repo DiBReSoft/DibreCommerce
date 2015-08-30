@@ -12,9 +12,9 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" 
-         href="<c:url value="/" />"
-         title="Página Inicial">
+      <a class="navbar-brand tooltip-bottom" 
+         href="<c:url value="/admin/" />"
+         title="Ir a página inicial">
         <strong>
           DibreCommerce
         </strong>
@@ -29,64 +29,137 @@
     <div class="collapse navbar-collapse" id="navbar-principal">
 
       <ul class="nav navbar-nav">
-        <li>
-          <a href="#">
-            Link
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            Link
-          </a>
-        </li>
+
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" 
+          <a href="<c:url value="/admin/clientes" />"
+             title="Operações relativas a Clientes"
+             class="dropdown-toggle" data-toggle="dropdown" 
              role="button" aria-expanded="false">
-            Dropdown <span class="caret"></span>
+            Clientes <span class="caret"></span>
           </a>
           <ul class="dropdown-menu" role="menu">
             <li>
-              <a href="#">
-                Action
+              <a href="<c:url value="/admin/clientes/cadastrar" />">
+                Cadastrar
+              </a>
+            </li>
+            <li>
+              <a href="<c:url value="/admin/clientes/consultar" />">
+                Consultar / Editar
               </a>
             </li>
             <li class="divider"></li>
             <li>
-              <a href="#">
-                Separated link
+              <a href="<c:url value="/admin/clientes/inativar" />">
+                Inativar
               </a>
             </li>
           </ul>
         </li>
+
+        <li class="dropdown">
+          <a href="<c:url value="/admin/estadias" />" 
+             title="Operações relativas as Estadias"
+             class="dropdown-toggle" data-toggle="dropdown" 
+             role="button" aria-expanded="false">
+            Estadias <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu" role="menu">
+            <li>
+              <a href="<c:url value="/admin/estadias/iniciar" />">
+                Iniciar
+              </a>
+            </li>
+            <li>
+              <a href="<c:url value="/admin/estadias/consultar" />">
+                Consultar / Editar
+              </a>
+            </li>
+            <li>
+              <a href="<c:url value="/admin/estadias/encerrar" />">
+                Encerrar
+              </a>
+            </li>
+            <li class="divider"></li>
+            <li>
+              <a href="<c:url value="/admin/estadias/cancelar" />">
+                Cancelar
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="<c:url value="/admin/reservas" />" 
+             title="Operações relativas as Reservas"
+             class="dropdown-toggle" data-toggle="dropdown" 
+             role="button" aria-expanded="false">
+            Reservas <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu" role="menu">
+            <li>
+              <a href="<c:url value="/admin/reservas/agendar" />">
+                Agendar
+              </a>
+            </li>
+            <li>
+              <a href="<c:url value="/admin/reservas/consultar" />">
+                Consultar / Editar
+              </a>
+            </li>
+            <li class="divider"></li>
+            <li>
+              <a href="<c:url value="/admin/reservas/cancelar" />">
+                Cancelar
+              </a>
+            </li>
+          </ul>
+        </li>
+
       </ul>
 
       <ul class="nav navbar-nav navbar-right">
         <li>
-          <a href="#">
-            Link
+          <a class="tooltip-bottom cursor-help"
+             title="Unidade de Operação">
+            <i class="fa fa-map-marker"></i>
+            <span class="hidden-sm">
+              <c:out value="${sessionScope.usuario.unidadeNome}" />
+              São Paulo
+            </span>
+            <span class="visible-sm-inline-block">
+              <c:out value="${sessionScope.usuario.unidadeUF}" />
+              SP
+            </span>
           </a>
         </li>
         <li>
           <div class="btn-group navbar-btn">
-            <button type="button" class="btn btn-primary">
+            <button type="button" id="usuarioNomeBotao"
+                    class="btn btn-primary tooltip-bottom"
+                    title="Visualizar perfil"
+                    onclick="location.href='<c:url value="/admin/perfil" />'">
+              <c:out value="${sessionScope.usuario.nome}" />
               Nome do Usuário
             </button>
-            <button type="button" class="btn btn-primary dropdown-toggle"
+            <button type="button" 
+                    class="btn btn-primary dropdown-toggle tooltip-left"
+                    title="Opções de Usuário"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <span class="caret"></span>
               <span class="sr-only">Toggle Dropdown</span>
             </button>
             <ul class="dropdown-menu">
               <li>
-                <a href="<c:url value="/admin/meu-cadastro" />">
-                  <i class="fa fa-fw fa-edit"></i>
-                  MEU CADASTRO
+                <a href="<c:url value="/admin/perfil" />">
+                  <i class="fa fa-fw fa-user"></i>
+                  PERFIL
                 </a>
               </li>
               <li>
                 <a data-toggle="modal" data-target="#selecionarTema">
                   <i class="fa fa-fw fa-paint-brush"></i>
-                  ALTERAR TEMA
+                  TEMA
                 </a>
               </li>
               <li role="separator" class="divider"></li>

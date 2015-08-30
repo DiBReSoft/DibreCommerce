@@ -1,23 +1,60 @@
-/* INFORME DO TEMPO NA UNIDADE */
+$(document).ready(function () {
 
-var nomeUnidade = $("#unidadeNome").text();
-nomeUnidade = nomeUnidade.replace(" ", "+");
-console.log(nomeUnidade);
+  informeClima();
 
-var xmlhttp = new XMLHttpRequest();
-var url = "/DibreCommerce/assets/js/tempo-saopaulo.json";
+  /* INFORME DO TEMPO NA UNIDADE */
+  function informeClima() {
 
-xmlhttp.onreadystatechange = function () {
-  if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
-    previsaoTempoJSON(xmlhttp.responseText);
+    var nomeUnidade = $("#climaUnidade").text();
+    console.log(nomeUnidade);
+
+    $.ajax({
+      "async": true, //cannot be false for JSONP
+      "url": "http://api.openweathermap.org/data/2.5/weather?q=" + nomeUnidade + ",br&units=metric&lang=pt",
+      "dataType": 'jsonp',
+      "method": "GET",
+      "error": function (jqXHR, textStatus, errorThrown) {
+        //included so you can see any errors
+        console.log(textStatus + ': ' + errorThrown);
+      },
+      "success": function (data, textStatus, jqXHR) {
+        console.info("JSONP da Previsão do Tempo: ");
+        console.log(data);
+        informeClimaFormatar(data);
+      }
+    });
+
+    function informeClimaFormatar(clima) {
+      $("#climaTemperatura").text("" + clima.main.temp);
+      $("#climaUmidade").text("" + clima.main.humidity);
+      $("#climaDescricao").text("" + clima.weather[0].description);
+      informeClimaVisual(clima);
+    }
+
+    function informeClimaVisual(climaCondicao) {
+      var informeClimaContainer = $("#climaContainer");
+      var informeClimaIcone = $("#climaIcone");
+      console.log(climaCondicao.weather[0].main);
+      switch (climaCondicao.weather[0].main) {
+        case "Clear":
+          informeClimaContainer.addClass("bg-clima-aberto");
+          informeClimaIcone.addClass("fa-sun-o");
+          break;
+        case "Clouds":
+          informeClimaContainer.addClass("bg-clima-nublado");
+          informeClimaIcone.addClass("fa-cloud");
+          break;
+        case "Rain":
+          informeClimaContainer.addClass("bg-clima-chuvoso");
+          informeClimaIcone.addClass("fa-tint");
+          break;
+        default:
+          informeClimaIcone.addClass("fa-question");
+          break;
+      }
+    }
+
   }
-};
+  /* INFORME DO TEMPO NA UNIDADE */
 
-xmlhttp.open("GET", url, true);
-xmlhttp.send();
-
-function previsaoTempoJSON(response) {
-  var arr = JSON.parse(response);
-  $("#unidadeTemperatura").text("" + arr.agora.temperatura);
-  $("#unidadeUmidade").text("" + arr.agora.umidade);
-}
+});

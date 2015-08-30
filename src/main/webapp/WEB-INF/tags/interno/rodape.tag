@@ -18,7 +18,7 @@
       <div class="col-sm-4 col-xs-6">
 
         <p class="text-right">          
-          <a class="rolar-topo"
+          <a class="rolar-topo tooltip-top"
              title="Rolar página para cima">
             Voltar ao topo
             <i class="fa fa-fw fa-chevron-up"></i>

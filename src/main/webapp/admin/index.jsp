@@ -24,19 +24,19 @@
 
       <div class="container-fluid">
 
-        <div class="page-header">
-          <h1>
-            Painel de Controle Administrativo
-          </h1>
-        </div>
-
-        <p class="lead">
-          Opções gerais para controle interno do hotel.
-        </p>
-
         <div class="row painel-opcoes">
 
           <div class="col-md-9">
+
+            <div class="page-header">
+              <h1>
+                Painel de Controle Administrativo
+              </h1>
+            </div>
+
+            <p class="lead">
+              Opções gerais para controle interno do hotel.
+            </p>
 
             <div class="row">
 
@@ -94,6 +94,8 @@
 
               </div>
 
+              <div class="col-sm-3 visible-sm-inline-block"></div>
+
               <div class="col-md-4 col-sm-6">
 
                 <a href="<c:url value='/admin/reservas' />"
@@ -112,7 +114,7 @@
 
                   <div class="thumbnail-description">
                     <p class="lead">
-                      Confira os próximos clientes, 
+                      Confira as próximas, 
                       agende ou edite as reservas
                     </p>
                   </div>
@@ -127,29 +129,55 @@
 
           <div class="col-md-3">
 
-            <div class="thumbnail text-center">
+            <div class="page-header">
+              <h1>
+                Infos
+              </h1>
+            </div>
 
-              <div class="thumbnail-icon">
-                <i class="fa fa-3x fa-moon-o"></i>
-              </div>
+            <p class="lead">
+              Auxiliares ao Hotel
+            </p>
 
-              <div class="thumbnail-title">
-                <h2 id="unidadeNome">São Paulo</h2>
-              </div>
+            <div class="row">
 
-              <div class="thumbnail-description lead">
+              <div class="col-md-12 col-sm-6">
 
-                Temperatura:
-                <strong>
-                  <span id="unidadeTemperatura"></span>°
-                </strong>
+                <div id="climaContainer" class="thumbnail text-center">
 
-                <br />
+                  <div class="thumbnail-icon">
+                    <i id="climaIcone" class="fa fa-3x fa-fw"></i>
+                  </div>
 
-                Umidade:
-                <strong id="unidadeUmidade">
-                  68
-                </strong>
+                  <div class="thumbnail-title">
+                    <h2 id="climaUnidade">São Paulo</h2>
+                  </div>
+
+                  <div class="thumbnail-description lead">
+
+                    <span id="climaDescricao" class="text-capitalize">
+                      --
+                    </span>
+
+                    <div class="row">
+
+                      <div class="col-xs-6 tooltip-bottom"
+                           title="Temperatura">
+                        <i class="fa fa-fire"></i>
+                        <span id="climaTemperatura">--</span>°
+                      </div>
+
+                      <div class="col-xs-6 tooltip-bottom"
+                           title="Umidade do Ar">
+                        <i class="fa fa-tint"></i>
+                        <span id="climaUmidade">--</span>%
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                </div>
 
               </div>
 

@@ -20,6 +20,8 @@ $(document).ready(function () {
 
   alterarTema();
 
+  tooltipsAtivar();
+
 });
 
 
@@ -95,4 +97,34 @@ function escolherTema() {
      */
 
   });
+}
+
+function tooltipsAtivar() {
+
+  $(".tooltip-top").tooltip({
+    container: 'body',
+    placement: 'top'
+  });
+
+  $(".tooltip-right").tooltip({
+    container: 'body',
+    placement: 'right'
+  });
+
+  $(".tooltip-bottom").tooltip({
+    container: 'body',
+    placement: 'bottom'
+  });
+
+  $(".tooltip-left").tooltip({
+    container: 'body',
+    placement: 'left'
+  });
+
+  $(".navbar .dropdown .dropdown-toggle").tooltip({
+    container: 'body',
+    placement: 'right',
+    trigger: 'hover'
+  });
+
 }

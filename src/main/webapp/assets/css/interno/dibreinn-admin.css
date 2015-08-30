@@ -35,6 +35,9 @@ aside.side-menu .list-group .list-group-item {
     padding: 12px 4px 11px 0px;
     border-right: 1px solid;
   }
+  #usuarioNomeBotao {
+    width: 150px;
+  }
 }
 
 footer {
@@ -92,4 +95,38 @@ footer {
 .rolar-topo:hover {
   text-decoration: none;
   background-color: rgba(0,0,0,0.15);
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.cursor-help,
+#climaContainer .tooltip-bottom {
+  cursor: help;
+}
+
+.bg-clima-aberto,
+.bg-clima-nublado, 
+.bg-clima-chuvoso {
+  background-size: cover;
+  border-color: transparent;
+}
+
+.bg-clima-aberto {
+  background-image: url(../../img/clima/sol.jpg);
+  color: #fff;
+  text-shadow: 1px 1px 2px #333333;
+}
+
+.bg-clima-nublado {
+  background-image: url(../../img/clima/nublado.jpg);
+  color: #fff;
+  text-shadow: 1px 1px 2px #333333;
+}
+
+.bg-clima-chuvoso {
+  background-image: url(../../img/clima/chuva.jpg);
+  color: #fff;
+  text-shadow: 1px 1px 2px #333333;
 }
