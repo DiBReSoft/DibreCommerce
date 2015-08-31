@@ -130,3 +130,13 @@ footer {
   color: #fff;
   text-shadow: 1px 1px 2px #333333;
 }
+
+@media(max-width: 468px) {
+
+
+  .navbar-right .btn-group.navbar-btn {
+    position: relative;
+    padding-left: 15px;
+  }
+
+}
