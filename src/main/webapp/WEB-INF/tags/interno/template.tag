@@ -11,7 +11,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
     <meta name="author" content="@DiBReSoft" />
-    
+
     <link rel="icon" href="<c:url value="/assets/img/favicon-dibresoft.ico" />">
 
     <title>
@@ -20,7 +20,7 @@
     </title>
 
     <!-- CSS Base -->
-    <link rel="stylesheet" type="text/css" media="all" href="<c:url value="/assets/css/bootstrap.css" />" id="coreCSS" />
+    <link rel="stylesheet" type="text/css" media="all" href="<c:url value="/assets/css/bootstrap-bootswatch-cosmo.css" />" id="coreCSS" />
     <link rel="stylesheet" type="text/css" media="all" href="<c:url value="/assets/css/interno/dibreinn-admin.css" />" />
     <link rel="stylesheet" type="text/css" media="all" href="<c:url value="/assets/css/font-awesome-4.4.0.min.css" />" />
 
@@ -30,18 +30,22 @@
 
   <body>
 
-    <!-- NAVBAR FIXA -->
-    <t:menu-superior />
+    <main id="wrapper">
 
-    <!-- CONTEUDO -->
-    <main>
-      <jsp:doBody />
+      <!-- NAVBAR FIXA -->
+      <t:menu-superior />
+
+      <!-- CONTEUDO -->
+      <main id="content">
+        <jsp:doBody />
+      </main>
+      <!-- CONTEUDO -->
+
+      <!-- RODAPE -->
+      <t:rodape />
+      <!-- RODAPE -->
+
     </main>
-    <!-- CONTEUDO -->
-
-    <!-- RODAPE -->
-    <t:rodape />
-    <!-- RODAPE -->
 
     <!-- para usar com recursos que poderiam pesar o carregamento da página -->
     <div id="carregarConteudoExtra"></div>

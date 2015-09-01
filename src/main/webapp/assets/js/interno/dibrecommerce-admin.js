@@ -1,7 +1,7 @@
 // VARIAVEIS PARA USO DE GAMBIARRAS
 var telaLargura = window.innerWidth;
 var telaAltura = window.innerHeight;
-document.addEventListener("resize", function () {
+window.addEventListener("resize", function () {
   telaLargura = window.innerWidth;
   telaAltura = window.innerHeight;
 });
@@ -18,8 +18,6 @@ $(document).ready(function () {
     body.animate({scrollTop: 0}, '500', 'swing');
   });
 
-  alterarTema();
-
   tooltipsAtivar();
   $(window).resize(tooltipsAtivar);
 
@@ -31,16 +29,15 @@ $(document).ready(function () {
 // DESTE BLOCO
 $(window).load(function () {
 
-  // inserir código aqui
+  alterarTema();
 
 });
+
 
 // para alterar o tema do sistema conforme a vontade do usuário
 function alterarTema() {
 
   $("[data-target='#selecionarTema']").click(function () {
-
-    console.info("Modal para seleção de tema.");
 
     $.get("/DibreCommerce/admin/extra/selecionar-tema.html", {"_": $.now()})
             .done(function () {
@@ -103,7 +100,7 @@ function escolherTema() {
 function tooltipsAtivar() {
 
   if (telaLargura > 767) {
-    
+
     $(".tooltip-top").tooltip({
       container: 'body',
       placement: 'top'
@@ -129,7 +126,9 @@ function tooltipsAtivar() {
       placement: 'right',
       trigger: 'hover'
     });
-    
+
+  } else {
+    $("[data-original-title]").tooltip("destroy");
   }
 
 }

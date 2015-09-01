@@ -6983,4 +6983,5 @@ a.list-group-item-danger.active:focus {
 .navbar .nav.navbar-right .btn-group .btn.dropdown-toggle {
   padding: 18.5px 10px;
   border-left: 1px solid rgba(0,0,0,0.1);
+  height: 43px;
 }

@@ -1,5 +1,5 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<nav class="navbar navbar-fixed-top navbar-default">
+<nav id="navbar" class="navbar navbar-fixed-top navbar-default">
 
   <div class="container-fluid">
 
@@ -16,21 +16,21 @@
          href="<c:url value="/admin/" />"
          title="Ir a página inicial">
         <strong>
-          DibreCommerce
+          Lebre Hotel
         </strong>
         <small>
-          <i class="fa fa-fw fa-lg fa-cart-plus"></i>
+          <i class="fa fa-fw fa-lg fa-bolt"></i>
         </small>
         Admin
       </a>
 
     </div>
 
-    <div class="collapse navbar-collapse" id="navbar-principal">
+    <div class="collapse navbar-collapse" id="navbar-collapse">
 
       <ul class="nav navbar-nav">
 
-        <li class="dropdown">
+        <li class="dropdown" id="menu-clientes">
           <a href="<c:url value="/admin/clientes" />"
              title="Operações relativas a Clientes"
              class="dropdown-toggle" data-toggle="dropdown" 
@@ -57,39 +57,7 @@
           </ul>
         </li>
 
-        <li class="dropdown">
-          <a href="<c:url value="/admin/estadias" />" 
-             title="Operações relativas as Estadias"
-             class="dropdown-toggle" data-toggle="dropdown" 
-             role="button" aria-expanded="false">
-            Estadias <span class="caret"></span>
-          </a>
-          <ul class="dropdown-menu" role="menu">
-            <li>
-              <a href="<c:url value="/admin/estadias/iniciar" />">
-                Iniciar
-              </a>
-            </li>
-            <li>
-              <a href="<c:url value="/admin/estadias/consultar" />">
-                Consultar / Editar
-              </a>
-            </li>
-            <li>
-              <a href="<c:url value="/admin/estadias/encerrar" />">
-                Encerrar
-              </a>
-            </li>
-            <li class="divider"></li>
-            <li>
-              <a href="<c:url value="/admin/estadias/cancelar" />">
-                Cancelar
-              </a>
-            </li>
-          </ul>
-        </li>
-
-        <li class="dropdown">
+        <li class="dropdown" id="menu-reservas">
           <a href="<c:url value="/admin/reservas" />" 
              title="Operações relativas as Reservas"
              class="dropdown-toggle" data-toggle="dropdown" 
@@ -116,10 +84,68 @@
           </ul>
         </li>
 
+        <li class="dropdown" id="menu-estadias">
+          <a href="<c:url value="/admin/estadias" />" 
+             title="Operações relativas as Estadias"
+             class="dropdown-toggle" data-toggle="dropdown" 
+             role="button" aria-expanded="false">
+            Estadias <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu" role="menu">
+            <li>
+              <a href="<c:url value="/admin/estadias/iniciar" />">
+                Iniciar
+              </a>
+            </li>
+            <li>
+              <a href="<c:url value="/admin/estadias/consultar" />">
+                Consultar / Editar
+              </a>
+            </li>
+            <li>
+              <a href="<c:url value="/admin/estadias/encerrar" />">
+                Encerrar
+              </a>
+            </li>
+          </ul>
+        </li>
+
       </ul>
 
       <ul class="nav navbar-nav navbar-right">
-        <li>
+
+        <li class="dropdown" id="menu-gerenciar">
+          <a href="<c:url value="/admin/gerenciar" />" 
+             title="Operações relativas ao Gerencimento"
+             class="dropdown-toggle tooltip-left" data-toggle="dropdown" 
+             role="button" aria-expanded="false">
+            Gerência <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu" role="menu">
+            <li>
+              <a href="<c:url value="/admin/gerenciar/funcionario" />">
+                Funcionários
+              </a>
+            </li>
+            <li>
+              <a href="<c:url value="/admin/gerenciar/quarto" />">
+                Quartos
+              </a>
+            </li>
+            <li>
+              <a href="<c:url value="/admin/gerenciar/unidade" />">
+                Unidades
+              </a>
+            </li>
+            <li>
+              <a href="<c:url value="/admin/relatorios" />">
+                Relatórios
+              </a>
+            </li>
+          </ul>
+        </li>
+        
+        <li class="disabled">
           <a class="tooltip-bottom cursor-help"
              title="Unidade de Operação">
             <i class="fa fa-map-marker"></i>
@@ -144,7 +170,7 @@
             </button>
             <button type="button" 
                     class="btn btn-primary dropdown-toggle tooltip-left"
-                    title="Opções de Usuário"
+                    title="Opções Exclusivas"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <span class="caret"></span>
               <span class="sr-only">Toggle Dropdown</span>

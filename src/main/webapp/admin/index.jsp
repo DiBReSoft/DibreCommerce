@@ -43,8 +43,8 @@
               <div class="col-md-4 col-sm-6">
 
                 <a href="<c:url value='/admin/clientes' />"
-                   class="thumbnail text-center"
-                   title="Encontre em nossa base">
+                   class="thumbnail text-center tooltip-top"
+                   title="Atue em nossa base de Clientes">
 
                   <div class="thumbnail-icon">
                     <i class="fa fa-3x fa-user"></i>
@@ -69,38 +69,9 @@
 
               <div class="col-md-4 col-sm-6">
 
-                <a href="<c:url value='/admin/estadias' />"
-                   class="thumbnail text-center"
-                   title="Controlar os clientes já hospedados">
-
-                  <div class="thumbnail-icon">
-                    <i class="fa fa-3x fa-bed"></i>
-                  </div>
-
-                  <div class="thumbnail-title">
-                    <h2>
-                      Estadias
-                    </h2>
-                  </div>
-
-                  <div class="thumbnail-description">
-                    <p class="lead">
-                      Iniciar um Reserva, Editar ou Fechar a 
-                      sessão já aberta
-                    </p>
-                  </div>
-
-                </a>
-
-              </div>
-
-              <div class="col-sm-3 visible-sm-inline-block"></div>
-
-              <div class="col-md-4 col-sm-6">
-
                 <a href="<c:url value='/admin/reservas' />"
-                   class="thumbnail text-center"
-                   title="Área de reservas para mais opções">
+                   class="thumbnail text-center tooltip-top"
+                   title="Área de Reservas agendadas">
 
                   <div class="thumbnail-icon">
                     <i class="fa fa-3x fa-book"></i>
@@ -116,6 +87,35 @@
                     <p class="lead">
                       Confira as próximas, 
                       agende ou edite as reservas
+                    </p>
+                  </div>
+
+                </a>
+
+              </div>
+
+              <div class="col-sm-3 visible-sm-inline-block"></div>
+
+              <div class="col-md-4 col-sm-6">
+
+                <a href="<c:url value='/admin/estadias' />"
+                   class="thumbnail text-center tooltip-top"
+                   title="Atuar com os hospedes">
+
+                  <div class="thumbnail-icon">
+                    <i class="fa fa-3x fa-bed"></i>
+                  </div>
+
+                  <div class="thumbnail-title">
+                    <h2>
+                      Estadias
+                    </h2>
+                  </div>
+
+                  <div class="thumbnail-description">
+                    <p class="lead">
+                      Iniciar uma, editar ou fechar 
+                      estadias em andamento
                     </p>
                   </div>
 
