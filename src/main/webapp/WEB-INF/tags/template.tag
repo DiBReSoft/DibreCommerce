@@ -11,14 +11,14 @@
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-    <meta name="author" content="DiBReTeam" />
+    <meta name="author" content="Luciano Lourenço, Thiago de Melo, Fabio Ernani, Udimberto Junior" />
 
     <title>
       <jsp:invoke fragment="paginaTitulo"/>
-      | Hotel XPTO
+      | Lebre Hotel
     </title>
     
-    <link rel="icon" href="/assets/favicon.ico">
+     <link rel="shortcut icon" href="<c:url value="/assets/img/favicon-lebrehotel.ico" />" type="image/x-icon" />
 
     <!-- CSS Base -->
     <link rel="stylesheet" type="text/css" href="<c:url value="/assets/css/bootstrap-bootswatch-cerulean.css" />" />
@@ -40,6 +40,8 @@
     <!-- JS Base -->
     <script type="text/javascript" src="<c:url value="/assets/js/jquery-2.1.3.min.js" />"></script>
     <script type="text/javascript" src="<c:url value="/assets/js/bootstrap.min.js" />"></script>
+    
+    <script type="text/javascript" src="<c:url value="/assets/js/bootstrap-datepicker.js" />"></script>
 
     <jsp:invoke fragment="paginaBottom"/>
 

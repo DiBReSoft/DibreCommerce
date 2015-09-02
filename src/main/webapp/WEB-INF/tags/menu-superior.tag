@@ -15,7 +15,7 @@
       <a class="navbar-brand" 
          href="<c:url value="/" />"
          title="Página Inicial">
-        Hotel XPTO
+        Lebre Hotel 
       </a>
          
     </div>
@@ -25,7 +25,7 @@
       <form class="navbar-form navbar-right" role="search"
             action="buscar" name="buscar" id="buscar">
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="Sei lá..." 
+          <input type="text" class="form-control" placeholder="Procurando algo ?" 
                  name="q" id="q" required="required" />
         </div>
         <button type="submit" class="btn btn-primary"
@@ -38,29 +38,29 @@
       <ul class="nav navbar-nav navbar-right">
         <li>
           <a href="#">
-            Link
+            Hoteis
           </a>
         </li>
         <li>
           <a href="#">
-            Link
+            Promoções
           </a>
         </li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" 
              role="button" aria-expanded="false">
-            Dropdown <span class="caret"></span>
+            Acesso <span class="caret"></span>
           </a>
           <ul class="dropdown-menu" role="menu">
             <li>
               <a href="#">
-                Action
+                Entrar
               </a>
             </li>
             <li class="divider"></li>
             <li>
               <a href="#">
-                Separated link
+                Cadastra-se
               </a>
             </li>
           </ul>

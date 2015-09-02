@@ -10,10 +10,12 @@
 
   <jsp:attribute name="paginaHead">
     <!-- Adiciona CSS e outros que vão no <head> da página -->
+    <script type="text/javascript" src="<c:url value="http://code.jquery.com/jquery-1.8.2.js" />"></script>
+    <link rel="stylesheet" type="text/css" href="<c:url value="/assets/css/datepicker.css" />" />
   </jsp:attribute>
 
   <jsp:attribute name="paginaBottom">
-    <!-- Adiciona JavaScript e outros trecho que vão ao final da página -->
+    
   </jsp:attribute>
 
   <jsp:body>
@@ -22,14 +24,13 @@
 
       <div class="container-fluid">
 
-        <h1>Jumbotron</h1>
+        <h1>Promoções</h1>
         <p>
-          This is a simple hero unit, a simple jumbotron-style component for 
-          calling extra attention to featured content or information.
+          lebre hotel está com uma promoção imperdivel!!!
         </p>
         <p>
           <a class="btn btn-primary btn-lg">
-            Learn more
+            Clique aqui
           </a>
         </p>
 
@@ -40,20 +41,58 @@
     <section>
 
       <div class="container-fluid">
+            <div class="panel panel-primary col-lg-6">
+              <div class="panel-heading">
+                <h3 class="panel-title">Hotéis</h3>
+              </div>
+              <div class="panel-body">
+<div class="form-group">
+  <label class="control-label" for="focusedInput">Onde quer ficar?</label>
+  <input class="form-control" id="focusedInput" type="text" placeholder="Cidade ou Hotel...">
+</div>
 
-        <h1>
-          Conteúdo
-        </h1>
+            <th>Entrada: <input type="text" class="span2" value="" id="dpd1"></th>
+            <th>Saída: <input type="text" class="span2" value="" id="dpd2"></th>
 
-        <p>
-          Hello, Page
-        </p>
-
+            </div>
+                <a href="#" class="btn btn-primary">Buscar</a>
+ </div>
+                 <div class="panel panel-success col-lg-6">
+              <div class="panel-heading">
+                <h3 class="panel-title">RECOMENDAMOS PARA VOCÊ</h3>
+              </div>
+              <div class="panel-body">
+                <ul class="list-group">
+                <li class="list-group-item">
+                  <span class="badge">14</span>
+                  Unidade São Paulo
+                </li>
+                <li class="list-group-item">
+                  <span class="badge">2</span>
+                  Unidade Rio de Janeiro
+                </li>
+                <li class="list-group-item">
+                  <span class="badge">1</span>
+                  Unidade Pernambuco
+                </li>
+              </ul>
+              </div>
+            </div>
       </div>
 
     </section>
 
     <!-- Conteúdo da página index.jsp -->
+    <script>
+    $(document).ready(function () {
+    $(function () {
+        $('.span2').datepicker({
+            
+        });
+
+    });
+});
+</script>
   </jsp:body>
 
 </t:template>
