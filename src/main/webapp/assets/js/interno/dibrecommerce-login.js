@@ -15,17 +15,9 @@ $(window).resize(function () {
 /******************************************************************************/
 
 /* Todos os codigos dentro desta declaracao, 
- * serao executados assim que a pÃ¡gina for ACESSADA */
+ * serao executados assim que a pagina for ACESSADA */
 $(document).ready(function () {
-
-  function posicionarBoxCredenciais() {
-    if (telaAltura > 450 && telaLargura > 767) {
-      $("section").css("height", (telaAltura - $("footer").height()) - 35 + "px");
-    }
-  }
-  posicionarBoxCredenciais();
-  $(window).resize(posicionarBoxCredenciais);
-
+  
 });
 
 /******************************************************************************/

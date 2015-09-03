@@ -65,12 +65,12 @@
 
           <div class="logo-dibreinn text-center">
 
-            <img src="<c:url value="/assets/img/logo-inncommerce.svg" />"
-                 alt="eCommerce Control"
+            <img src="<c:url value="/assets/img/logo-lebre.svg" />"
+                 alt="Lebre Hotel"
                  class="center-block"/>
 
             <h3>
-              e-Commerce Control
+              Lebre Hotel
             </h3>
 
           </div>
@@ -87,10 +87,9 @@
 
             <div class="lock-panel-header">
               <strong>
-                DiBRe 
-                <span class="text-success">Inn</span>
+                DiBRe<span class="text-success">Commerce</span>
               </strong>
-              <small>Acesso</small>
+              <small>Administração</small>
             </div>
 
             <div class="lock-panel-body">

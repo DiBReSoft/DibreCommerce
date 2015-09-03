@@ -59,7 +59,7 @@
   </head>
   <body onload="getTime()">
 
-    <section>
+    <section id="wrapper">
 
       <jsp:doBody/>
 

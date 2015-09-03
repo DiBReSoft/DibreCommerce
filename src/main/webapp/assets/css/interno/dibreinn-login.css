@@ -8,7 +8,7 @@
 /*LOCK SCREEN CONF*/
 
 section {
-  padding: 40px 0px;
+  padding: 60px 0px;
 }
 
 .logo-dibreinn img {
@@ -106,4 +106,31 @@ footer a {
   footer .creditos:last-of-type {
     padding-top: 10px;
   }
+}
+
+html,
+body {
+  height:100%;
+}
+#wrapper {
+  min-height: 100%;
+  position: relative;
+}
+
+main#content {
+  padding-bottom: 40px; // altura do footer da pagina
+}
+
+@media(max-width: 767px) {
+main#content {
+  padding-bottom: 105px; // altura do footer da pagina
+}
+}
+
+footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  opacity: 0.75;
 }
