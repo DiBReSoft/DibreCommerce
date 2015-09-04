@@ -215,3 +215,9 @@ footer#footerPagina .footer-rolar-topo {
   text-decoration: none;
   background-color: rgba(0,0,0,0.15);
 }
+
+.text-overflow {
+  white-space: nowrap; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

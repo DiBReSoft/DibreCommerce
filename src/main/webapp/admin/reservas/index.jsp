@@ -5,7 +5,7 @@
 <t:template>
 
   <jsp:attribute name="paginaTitulo">
-    Painel Administrativo
+    Reservas
   </jsp:attribute>
 
   <jsp:attribute name="paginaHead">
@@ -15,6 +15,11 @@
   <jsp:attribute name="paginaBottom">
     <!-- Adiciona JavaScript e outros trecho que vão ao final da página -->
     <script type="text/javascript" src="<c:url value='/assets/js/interno/dibrecommerce-painel-de-controle.js' />"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("#menu-reservas").addClass("active");
+      });
+    </script>
   </jsp:attribute>
 
   <jsp:body>
@@ -30,39 +35,42 @@
 
             <div class="page-header">
               <h1>
-                Painel
+                Painel 
                 <span class="hidden-sm hidden-xs">
                   Administrativo
                 </span>
+                / 
+                <strong>
+                  Reservas
+                </strong>
               </h1>
             </div>
 
             <p class="lead">
-              Opções gerais para controle interno do hotel.
+              Opções relativas as reservas no hotel.
             </p>
 
             <div class="row">
 
               <div class="col-md-4 col-sm-6">
 
-                <a href="<c:url value='/admin/clientes' />"
+                <a href="<c:url value='/admin/reservas/agendar' />"
                    class="thumbnail text-center tooltip-bottom"
-                   title="Atue em nossa base de Clientes">
+                   title="Agende uma nova reserva em sua unidade">
 
                   <div class="thumbnail-icon">
-                    <i class="fa fa-3x fa-user"></i>
+                    <i class="fa fa-3x fa-book"></i>
                   </div>
 
                   <div class="thumbnail-title">
                     <h2>
-                      Clientes
+                      Agendar Nova
                     </h2>
                   </div>
 
                   <div class="thumbnail-description">
                     <p class="lead">
-                      Cadastre, consulte o histórico,
-                      edite ou inative
+                      Realizar uma nova reserva de quarto no hotel
                     </p>
                   </div>
 
@@ -72,24 +80,24 @@
 
               <div class="col-md-4 col-sm-6">
 
-                <a href="<c:url value='/admin/reservas' />"
+                <a href="<c:url value='/admin/reservas/consultar' />"
                    class="thumbnail text-center tooltip-bottom"
-                   title="Área de Reservas agendadas">
+                   title="Busque por uma reserva já agendada">
 
                   <div class="thumbnail-icon">
-                    <i class="fa fa-3x fa-book"></i>
+                    <i class="fa fa-3x fa-search"></i>
                   </div>
 
                   <div class="thumbnail-title">
                     <h2>
-                      Reservas
+                      Consultar / Editar
                     </h2>
                   </div>
 
                   <div class="thumbnail-description">
                     <p class="lead">
-                      Confira as próximas, 
-                      agende ou edite as reservas
+                      Visualizar dados de uma reserva
+                      ou editar detalhes
                     </p>
                   </div>
 
@@ -101,24 +109,23 @@
 
               <div class="col-md-4 col-sm-6">
 
-                <a href="<c:url value='/admin/estadias' />"
+                <a href="<c:url value='/admin/reservas/cancelar' />"
                    class="thumbnail text-center tooltip-bottom"
-                   title="Atuar com os hospedes">
+                   title="Encontre uma reserva para cancelá-la">
 
                   <div class="thumbnail-icon">
-                    <i class="fa fa-3x fa-bed"></i>
+                    <i class="fa fa-3x fa-search-minus"></i>
                   </div>
 
                   <div class="thumbnail-title">
                     <h2>
-                      Estadias
+                      Cancelar Reserva
                     </h2>
                   </div>
 
                   <div class="thumbnail-description">
                     <p class="lead">
-                      Iniciar uma, editar ou fechar 
-                      estadias em andamento
+                      Caso haja desistência por parte do cliente
                     </p>
                   </div>
 

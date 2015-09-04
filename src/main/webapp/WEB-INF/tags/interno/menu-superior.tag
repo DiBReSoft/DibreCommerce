@@ -1,5 +1,5 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<nav id="navbar" class="navbar navbar-fixed-top navbar-default">
+<nav id="navbar" class="navbar navbar-fixed-top navbar-inverse">
 
   <div class="container-fluid">
 
@@ -162,14 +162,14 @@
         <li>
           <div class="btn-group navbar-btn">
             <button type="button" id="usuarioNomeBotao"
-                    class="btn btn-primary tooltip-bottom"
+                    class="btn btn-default tooltip-bottom"
                     title="Visualizar perfil"
                     onclick="location.href='<c:url value="/admin/perfil" />'">
               <c:out value="${sessionScope.usuario.nome}" />
               Nome do Usuário
             </button>
             <button type="button" 
-                    class="btn btn-primary dropdown-toggle tooltip-left"
+                    class="btn btn-default dropdown-toggle tooltip-left"
                     title="Opções Exclusivas"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <span class="caret"></span>

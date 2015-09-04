@@ -5,7 +5,7 @@
 <t:template>
 
   <jsp:attribute name="paginaTitulo">
-    Painel Administrativo
+    Clientes
   </jsp:attribute>
 
   <jsp:attribute name="paginaHead">
@@ -15,6 +15,11 @@
   <jsp:attribute name="paginaBottom">
     <!-- Adiciona JavaScript e outros trecho que vão ao final da página -->
     <script type="text/javascript" src="<c:url value='/assets/js/interno/dibrecommerce-painel-de-controle.js' />"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("#menu-clientes").addClass("active");
+      });
+    </script>
   </jsp:attribute>
 
   <jsp:body>
@@ -30,39 +35,42 @@
 
             <div class="page-header">
               <h1>
-                Painel
+                Painel 
                 <span class="hidden-sm hidden-xs">
                   Administrativo
                 </span>
+                / 
+                <strong>
+                  Clientes
+                </strong>
               </h1>
             </div>
 
             <p class="lead">
-              Opções gerais para controle interno do hotel.
+              Opções relativas aos clientes do hotel.
             </p>
 
             <div class="row">
 
               <div class="col-md-4 col-sm-6">
 
-                <a href="<c:url value='/admin/clientes' />"
+                <a href="<c:url value='/admin/clientes/cadastrar' />"
                    class="thumbnail text-center tooltip-bottom"
-                   title="Atue em nossa base de Clientes">
+                   title="Registre um novo cliente na base de dados do hotel">
 
                   <div class="thumbnail-icon">
-                    <i class="fa fa-3x fa-user"></i>
+                    <i class="fa fa-3x fa-user-plus"></i>
                   </div>
 
                   <div class="thumbnail-title">
                     <h2>
-                      Clientes
+                      Cadastrar Novo
                     </h2>
                   </div>
 
                   <div class="thumbnail-description">
                     <p class="lead">
-                      Cadastre, consulte o histórico,
-                      edite ou inative
+                      Registre um novo cliente na base de dados do hotel
                     </p>
                   </div>
 
@@ -72,24 +80,24 @@
 
               <div class="col-md-4 col-sm-6">
 
-                <a href="<c:url value='/admin/reservas' />"
+                <a href="<c:url value='/admin/clientes/consultar' />"
                    class="thumbnail text-center tooltip-bottom"
-                   title="Área de Reservas agendadas">
+                   title="Busque por um cliente já cadastrado">
 
                   <div class="thumbnail-icon">
-                    <i class="fa fa-3x fa-book"></i>
+                    <i class="fa fa-3x fa-search"></i>
                   </div>
 
                   <div class="thumbnail-title">
                     <h2>
-                      Reservas
+                      Consultar / Editar
                     </h2>
                   </div>
 
                   <div class="thumbnail-description">
                     <p class="lead">
-                      Confira as próximas, 
-                      agende ou edite as reservas
+                      Visualizar dados do histórico
+                      ou editar informações
                     </p>
                   </div>
 
@@ -101,24 +109,24 @@
 
               <div class="col-md-4 col-sm-6">
 
-                <a href="<c:url value='/admin/estadias' />"
+                <a href="<c:url value='/admin/clientes/inativar' />"
                    class="thumbnail text-center tooltip-bottom"
-                   title="Atuar com os hospedes">
+                   title="Encontre o cliente e desative o cadastro">
 
                   <div class="thumbnail-icon">
-                    <i class="fa fa-3x fa-bed"></i>
+                    <i class="fa fa-3x fa-user-times"></i>
                   </div>
 
                   <div class="thumbnail-title">
                     <h2>
-                      Estadias
+                      Inativar Cliente
                     </h2>
                   </div>
 
                   <div class="thumbnail-description">
                     <p class="lead">
-                      Iniciar uma, editar ou fechar 
-                      estadias em andamento
+                      Caso não queira mais ser incomodado,
+                      desative o cadastro
                     </p>
                   </div>
 
