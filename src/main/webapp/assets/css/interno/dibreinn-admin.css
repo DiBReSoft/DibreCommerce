@@ -22,7 +22,7 @@ body {
 }
 
 main#content {
-  padding-bottom: 200px; // altura do footer da pagina
+  padding-bottom: 190px;
 }
 
 aside.side-menu, main.side-content {
@@ -150,11 +150,11 @@ aside.side-menu .list-group .list-group-item {
 
 footer#footerPagina {
   width: 100%;
-  height: 140px;
+  height: 50px;
   position: absolute;
   bottom: 0;
   left: 0;
-  padding: 53px 0px;
+  padding: 10px 0px;
   opacity: 0.75;
 }
 
@@ -181,7 +181,7 @@ footer#footerPagina .footer-rolar-topo {
   }
 
   footer#footerPagina {
-    height: 190px;
+    height: 100px;
   }
 
 }
@@ -214,10 +214,4 @@ footer#footerPagina .footer-rolar-topo {
 .rolar-topo:hover {
   text-decoration: none;
   background-color: rgba(0,0,0,0.15);
-}
-
-.text-overflow {
-  white-space: nowrap; 
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
