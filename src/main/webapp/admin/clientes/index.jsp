@@ -36,9 +36,6 @@
             <div class="page-header">
               <h1>
                 Painel 
-                <span class="hidden-sm hidden-xs">
-                  Administrativo
-                </span>
                 / 
                 <strong>
                   Clientes

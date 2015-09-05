@@ -13,10 +13,7 @@ import java.util.logging.Logger;
  * @author Thiago data: 04/04/2015
  *
  */
-public class Funcionario extends Pessoa {
-
-  //private int id;
-  
+public class Funcionario extends Pessoa {  
   
   private int privilegio;
   private int unidade;

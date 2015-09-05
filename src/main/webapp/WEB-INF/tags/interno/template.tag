@@ -1,4 +1,4 @@
-<%@tag description="DibreInn-eCommerce" pageEncoding="UTF-8"%>
+<%@tag description="DibreCommerce" pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="t" tagdir="/WEB-INF/tags/interno" %>
 <%@attribute name="paginaTitulo" fragment="true" %>
@@ -20,7 +20,7 @@
     </title>
 
     <!-- CSS Base -->
-    <link rel="stylesheet" type="text/css" media="all" href="<c:url value="/assets/css/bootstrap-bootswatch-cosmo.css" />" id="coreCSS" />
+    <link rel="stylesheet" type="text/css" media="all" href="<c:url value="/assets/css/bootstrap-bootswatch-flaty.css" />" id="coreCSS" />
     <link rel="stylesheet" type="text/css" media="all" href="<c:url value="/assets/css/interno/dibreinn-admin.css" />" />
     <link rel="stylesheet" type="text/css" media="all" href="<c:url value="/assets/css/font-awesome-4.4.0.min.css" />" />
 

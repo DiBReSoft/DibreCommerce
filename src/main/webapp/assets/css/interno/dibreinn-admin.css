@@ -22,7 +22,7 @@ body {
 }
 
 main#content {
-  padding-bottom: 190px;
+  padding-bottom: 160px;
 }
 
 aside.side-menu, main.side-content {
@@ -88,6 +88,7 @@ aside.side-menu .list-group .list-group-item {
   margin: 0;
   padding: 0px 0px 15px 0px;
   min-height: 73px;
+  font-weight: 100;
 }
 
 .thumbnail-description * {
@@ -214,4 +215,16 @@ footer#footerPagina .footer-rolar-topo {
 .rolar-topo:hover {
   text-decoration: none;
   background-color: rgba(0,0,0,0.15);
+}
+
+.form-di input[required] {
+  background-image: url('../../img/asterisk.svg');
+  background-position: 3px 3px;
+  background-size: 10px;
+  background-repeat: no-repeat;
+  padding-right: 0;
+}
+
+label[for] {
+  cursor: pointer;
 }

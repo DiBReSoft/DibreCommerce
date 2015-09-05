@@ -1,12 +1,12 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<nav id="navbar" class="navbar navbar-fixed-top navbar-inverse">
+<nav id="navbar" class="navbar navbar-fixed-top navbar-default">
 
   <div class="container-fluid">
 
     <div class="navbar-header">
 
       <button type="button" class="navbar-toggle collapsed"
-              data-toggle="collapse" data-target="#navbar-principal">
+              data-toggle="collapse" data-target="#navbar-collapse">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -14,11 +14,16 @@
       </button>
       <a class="navbar-brand tooltip-bottom" 
          href="<c:url value="/admin/" />"
-         title="Ir a página inicial">
+         title="Página inicial | Lebre Hotel Admin">
         <strong>
-          Lebre Hotel
+          <span class="hidden-sm">
+            Lebre Hotel
+          </span>
+          <span class="visible-sm-inline-block">
+            L.H.
+          </span>
         </strong>
-        <small>
+        <small class="hidden-sm">
           <i class="fa fa-fw fa-lg fa-bolt"></i>
         </small>
         Admin
@@ -144,7 +149,7 @@
             </li>
           </ul>
         </li>
-        
+
         <li class="disabled">
           <a class="tooltip-bottom cursor-help"
              title="Unidade de Operação">
@@ -162,14 +167,14 @@
         <li>
           <div class="btn-group navbar-btn">
             <button type="button" id="usuarioNomeBotao"
-                    class="btn btn-default tooltip-bottom"
+                    class="btn btn-success tooltip-bottom"
                     title="Visualizar perfil"
-                    onclick="location.href='<c:url value="/admin/perfil" />'">
+                    onclick="location.href = '<c:url value="/admin/perfil" />'">
               <c:out value="${sessionScope.usuario.nome}" />
               Nome do Usuário
             </button>
             <button type="button" 
-                    class="btn btn-default dropdown-toggle tooltip-left"
+                    class="btn btn-success dropdown-toggle tooltip-left"
                     title="Opções Exclusivas"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <span class="caret"></span>
