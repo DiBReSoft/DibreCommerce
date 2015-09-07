@@ -18,8 +18,6 @@ $(document).ready(function () {
         console.log(textStatus + ': ' + errorThrown);
       },
       "success": function (data, textStatus, jqXHR) {
-        console.info("JSONP da Previsão do Tempo: ");
-        console.log(data);
         informeClimaFormatar(data);
       }
     });
@@ -47,6 +45,10 @@ $(document).ready(function () {
         case "Rain":
           informeClimaContainer.addClass("bg-clima-chuvoso");
           informeClimaIcone.addClass("fa-tint");
+          break;
+        case "Thunderstorm":
+          informeClimaContainer.addClass("bg-clima-chuvoso");
+          informeClimaIcone.addClass("fa-flash");
           break;
         default:
           informeClimaIcone.addClass("fa-question");

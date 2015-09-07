@@ -21,8 +21,8 @@
      <link rel="shortcut icon" href="<c:url value="/assets/img/favicon-lebrehotel.ico" />" type="image/x-icon" />
 
     <!-- CSS Base -->
-    <link rel="stylesheet" type="text/css" href="<c:url value="/assets/css/bootstrap-bootswatch-cerulean.css" />" />
-    <link rel="stylesheet" type="text/css" href="<c:url value="/assets/css/dibreinn-ecommerce.css" />" />
+    <link rel="stylesheet" type="text/css" href="<c:url value="/assets/css/bootstrap-bootswatch-flaty.css" />" />
+    <link rel="stylesheet" type="text/css" href="<c:url value="/assets/css/dibrecommerce.css" />" />
     <link rel="stylesheet" type="text/css" href="<c:url value="/assets/css/font-awesome-4.4.0.min.css" />" />
 
     <jsp:invoke fragment="paginaHead"/>
@@ -38,8 +38,9 @@
     <t:rodape />
 
     <!-- JS Base -->
-    <script type="text/javascript" src="<c:url value="/assets/js/jquery-2.1.3.min.js" />"></script>
+    <script type="text/javascript" src="<c:url value="/assets/js/jquery-1.11.3.min.js" />"></script>
     <script type="text/javascript" src="<c:url value="/assets/js/bootstrap.min.js" />"></script>
+    <script type="text/javascript" src="<c:url value="/assets/js/dibrecommerce.js" />"></script>
     
     <script type="text/javascript" src="<c:url value="/assets/js/bootstrap-datepicker.js" />"></script>
 

@@ -5,8 +5,9 @@
 
     <ul class="nav nav-pills">
       <li class="pull-right">
-        <a href="#navbar-principal">
+        <a class="rolar-topo">
           Voltar ao topo
+          <i class="fa fa-fw fa-angle-double-up"></i>
         </a>
       </li>
       <li>

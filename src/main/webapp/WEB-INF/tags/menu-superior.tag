@@ -22,20 +22,7 @@
 
     <div class="collapse navbar-collapse" id="navbar-principal">
       
-      <form class="navbar-form navbar-right" role="search"
-            action="buscar" name="buscar" id="buscar">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Procurando algo ?" 
-                 name="q" id="q" required="required" />
-        </div>
-        <button type="submit" class="btn btn-primary"
-                title="Buscar">
-          <i class="fa fa-fw fa-search"></i>
-          <span class="visible-xs-inline-block">Buscar</span>
-        </button>
-      </form>
-      
-      <ul class="nav navbar-nav navbar-right">
+      <ul class="nav navbar-nav">
         <li>
           <a href="#">
             Hoteis
@@ -66,6 +53,19 @@
           </ul>
         </li>
       </ul>
+      
+      <form class="navbar-form navbar-right" role="search"
+            action="buscar" name="buscar" id="buscar">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Procurando algo?" 
+                 name="por" id="por" required="required" />
+        </div>
+        <button type="submit" class="btn btn-success"
+                title="Buscar">
+          <i class="fa fa-fw fa-search"></i>
+          <span class="visible-xs-inline-block">Buscar</span>
+        </button>
+      </form>
       
     </div>
          

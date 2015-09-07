@@ -10,12 +10,24 @@
 
   <jsp:attribute name="paginaHead">
     <!-- Adiciona CSS e outros que vão no <head> da página -->
-    <script type="text/javascript" src="<c:url value="http://code.jquery.com/jquery-1.8.2.js" />"></script>
-    <link rel="stylesheet" type="text/css" href="<c:url value="/assets/css/datepicker.css" />" />
+    <link rel="stylesheet" type="text/css" href="<c:url value="/assets/css/bootstrap-datepicker.min.css" />" />
   </jsp:attribute>
 
   <jsp:attribute name="paginaBottom">
-    
+    <!-- Adiciona JS e outros que vão no final da página -->
+    <script type="text/javascript" src="<c:url value="/assets/js/bootstrap-datepicker.min.js" />"></script>
+    <script type="text/javascript" src="<c:url value="/assets/js/bootstrap-datepicker.pt-BR.min.js" />"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+
+        $(".init-datepicker").datepicker({
+          language: "pt-BR",
+          format: "dd/mm/yyyy",
+          todayBtn: "linked"
+        });
+
+      });
+    </script>
   </jsp:attribute>
 
   <jsp:body>
@@ -26,11 +38,12 @@
 
         <h1>Promoções</h1>
         <p>
-          lebre hotel está com uma promoção imperdivel!!!
+          Aproveite o melhor do Feriado conosco em Porto Seguro!
         </p>
         <p>
-          <a class="btn btn-primary btn-lg">
-            Clique aqui
+          <a class="btn btn-lg btn-success"
+             href="/promocoes/porto-seguro">
+            Detalhes e Reservas
           </a>
         </p>
 
@@ -41,28 +54,157 @@
     <section>
 
       <div class="container-fluid">
-            <div class="panel panel-primary col-lg-6">
-              <div class="panel-heading">
-                <h3 class="panel-title">Hotéis</h3>
-              </div>
-              <div class="panel-body">
-<div class="form-group">
-  <label class="control-label" for="focusedInput">Onde quer ficar?</label>
-  <input class="form-control" id="focusedInput" type="text" placeholder="Cidade ou Hotel...">
-</div>
 
-            <th>Entrada: <input type="text" class="span2" value="" id="dpd1"></th>
-            <th>Saída: <input type="text" class="span2" value="" id="dpd2"></th>
+        <div class="col-lg-6">
+
+          <h2>
+            Hospede-se conosco
+          </h2>
+
+          <div class="panel panel-primary">
+
+            <div class="panel-body">
+
+              <div class="hidden-sm hidden-xs" style="padding: 8px 0px;"></div>
+
+              <!-- Guia de uso dos Forms: http://getbootstrap.com/css/#forms -->
+              <form method="post" action="reservar" enctype="utf-8">
+
+                <div class="col-md-6">
+
+                  <div class="form-group">
+
+                    <label for="reservaIn" class="hidden-lg hidden-md">
+                      Data de Entrada:
+                    </label>
+
+                    <div class="input-group">
+
+                      <div class="input-group-addon">
+
+                        <label for="reservaIn">
+
+                          <i class="fa fa-fw fa-calendar-plus-o"></i>
+
+                          <span class="hidden-sm hidden-xs">
+                            Entrada: 
+                          </span>
+
+                        </label>
+
+                      </div>
+
+                      <input type="text" class="form-control init-datepicker" id="reservaIn" />
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <div class="col-md-6">
+
+                  <div class="form-group">
+
+                    <label for="reservaOut" class="hidden-lg hidden-md">
+                      Data de Saída:
+                    </label>
+
+                    <div class="input-group">
+
+                      <div class="input-group-addon">
+
+                        <label for="reservaOut">
+
+                          <i class="fa fa-fw fa-calendar-minus-o"></i>
+
+                          <span class="hidden-sm hidden-xs">
+                            Saída:
+                          </span>
+
+                        </label>
+
+                      </div>
+
+                      <input type="text" class="form-control init-datepicker" id="reservaOut" />
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <div class="clearfix"></div>
+
+                <div class="col-md-8">
+
+                  <div class="form-group">
+
+                    <label class="control-label hidden-lg hidden-md" for="focusedInput">
+                      Onde pretende ficar?
+                    </label>
+
+                    <div class="input-group">
+
+                      <div class="input-group-addon">
+
+                        <label for="focusedInput">
+
+                          <i class="fa fa-fw fa-map-marker"></i>
+
+                          <span class="hidden-sm hidden-xs">
+                            Destino:
+                          </span>
+
+                        </label>
+
+                      </div>
+
+                      <input class="form-control" id="focusedInput" 
+                             type="text" placeholder="Cidade ou Hotel" />
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <div class="col-md-4">
+
+                  <button type="submit" class="btn btn-primary btn-block">
+                    Encontrar
+                    <i class="fa fa-fw fa-search"></i>
+                  </button>
+
+                </div>
+
+              </form>        
 
             </div>
-                <a href="#" class="btn btn-primary">Buscar</a>
- </div>
-                 <div class="panel panel-success col-lg-6">
-              <div class="panel-heading">
-                <h3 class="panel-title">RECOMENDAMOS PARA VOCÊ</h3>
-              </div>
-              <div class="panel-body">
-                <ul class="list-group">
+
+            <div class="panel-footer text-center">
+
+              Lebre Hotel | Nos melhores locais
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="col-lg-6">
+
+          <h2 class="text-success">
+            Recomendamos para você
+          </h2>
+
+          <div class="panel panel-success">
+
+            <div class="panel-body">
+
+              <div class="hidden-sm hidden-xs" style="padding: 8px 0px;"></div>
+
+              <ul class="list-group">
                 <li class="list-group-item">
                   <span class="badge">14</span>
                   Unidade São Paulo
@@ -76,23 +218,18 @@
                   Unidade Pernambuco
                 </li>
               </ul>
-              </div>
+
             </div>
+
+          </div>
+
+        </div>
       </div>
 
     </section>
 
     <!-- Conteúdo da página index.jsp -->
-    <script>
-    $(document).ready(function () {
-    $(function () {
-        $('.span2').datepicker({
-            
-        });
 
-    });
-});
-</script>
   </jsp:body>
 
 </t:template>
