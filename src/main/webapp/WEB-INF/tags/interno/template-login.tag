@@ -22,7 +22,7 @@
     <link rel="stylesheet" type="text/css" href="<c:url value="/assets/css/font-awesome-4.4.0.min.css" />" />
 
     <!-- CSS Especial para este tipo de pagina -->
-    <link rel="stylesheet" type="text/css" href="<c:url value="/assets/css/interno/dibreinn-login.css" />" />
+    <link rel="stylesheet" type="text/css" href="<c:url value="/assets/css/interno/dibrecommerce-login.css" />" />
 
     <jsp:invoke fragment="paginaHead"/>
 

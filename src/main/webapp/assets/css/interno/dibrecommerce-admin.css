@@ -228,3 +228,9 @@ footer#footerPagina .footer-rolar-topo {
 label[for] {
   cursor: pointer;
 }
+
+.text-overflow {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

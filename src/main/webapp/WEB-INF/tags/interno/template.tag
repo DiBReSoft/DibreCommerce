@@ -21,7 +21,7 @@
 
     <!-- CSS Base -->
     <link rel="stylesheet" type="text/css" media="all" href="<c:url value="/assets/css/bootstrap-bootswatch-flaty.css" />" id="coreCSS" />
-    <link rel="stylesheet" type="text/css" media="all" href="<c:url value="/assets/css/interno/dibreinn-admin.css" />" />
+    <link rel="stylesheet" type="text/css" media="all" href="<c:url value="/assets/css/interno/dibrecommerce-admin.css" />" />
     <link rel="stylesheet" type="text/css" media="all" href="<c:url value="/assets/css/font-awesome-4.4.0.min.css" />" />
 
     <jsp:invoke fragment="paginaHead"/>
