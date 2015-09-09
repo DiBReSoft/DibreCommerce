@@ -5,7 +5,7 @@
 <t:template>
 
   <jsp:attribute name="paginaTitulo">
-    Início
+    Hospede-se conosco
   </jsp:attribute>
 
   <jsp:attribute name="paginaHead">
@@ -19,13 +19,31 @@
     <script type="text/javascript" src="<c:url value="/assets/js/bootstrap-datepicker.pt-BR.min.js" />"></script>
     <script type="text/javascript">
       $(document).ready(function () {
-
+        
+        /* Preenche o Placeholder nos campos de data, com datas reais */
+        var dataHoje = new Date();
+        $("#reservaIn").attr("placeholder", "Ex.: " + dataHoje.getDate() + "/" + (dataHoje.getMonth() + 1) + "/" + dataHoje.getFullYear());
+        var dataFutura = new Date();
+        dataFutura.setDate(dataHoje.getDate() + 5);
+        $("#reservaOut").attr("placeholder", "Ex.: " + dataFutura.getDate() + "/" + (dataFutura.getMonth() + 1) + "/" + dataFutura.getFullYear());
+        /* Preenche o Placeholder nos campos de data, com datas reais */
+        
+        /* Inicializa o Calendário nos campos de data */
         $(".init-datepicker").datepicker({
           language: "pt-BR",
           format: "dd/mm/yyyy",
           todayBtn: "linked"
         });
-
+        /* Inicializa o Calendário nos campos de data */
+        
+        $("#reservaIn").on("change", function() {
+          
+        });
+        
+        function vertificarDataEntrada() {
+          
+        }
+        
       });
     </script>
   </jsp:attribute>
@@ -72,7 +90,7 @@
 
                 <div class="col-md-6">
 
-                  <div class="form-group">
+                  <div class="form-group" id="reservaInContainer">
 
                     <label for="reservaIn" class="hidden-lg hidden-md">
                       Data de Entrada:
@@ -104,7 +122,7 @@
 
                 <div class="col-md-6">
 
-                  <div class="form-group">
+                  <div class="form-group" id="reservaOutContainer">
 
                     <label for="reservaOut" class="hidden-lg hidden-md">
                       Data de Saída:
@@ -140,8 +158,8 @@
 
                   <div class="form-group">
 
-                    <label class="control-label hidden-lg hidden-md" for="focusedInput">
-                      Onde pretende ficar?
+                    <label class="control-label hidden-lg hidden-md" for="reservaHotel">
+                      Selecione uma unidade:
                     </label>
 
                     <div class="input-group">
@@ -153,15 +171,22 @@
                           <i class="fa fa-fw fa-map-marker"></i>
 
                           <span class="hidden-sm hidden-xs">
-                            Destino:
+                            Unidade:
                           </span>
 
                         </label>
 
                       </div>
 
-                      <input class="form-control" id="focusedInput" 
-                             type="text" placeholder="Cidade ou Hotel" />
+                      <select class="form-control" 
+                              id="reservaHotel" name="reservaHotel">
+                        <option value="1">
+                          SP | São Paulo
+                        </option>
+                        <option value="2">
+                          SP | São José dos Campos
+                        </option>
+                      </select>
 
                     </div>
 
@@ -171,8 +196,8 @@
 
                 <div class="col-md-4">
 
-                  <button type="submit" class="btn btn-primary btn-block">
-                    Encontrar
+                  <button id="reservaCotar" type="button" class="btn btn-primary btn-block disabled">
+                    Cotar Preço
                     <i class="fa fa-fw fa-search"></i>
                   </button>
 

@@ -32,3 +32,14 @@ label[for]:hover {
 .input-group .input-group-addon label {
   margin-bottom: 0;
 }
+
+.datepicker-days table thead tr {
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+.datepicker-days table tfoot {
+  border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+#reservaIn #reservaOut {
+  transition: 0.3s;
+}
