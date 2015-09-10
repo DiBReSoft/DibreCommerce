@@ -21,6 +21,7 @@
 
     <!-- CSS Base -->
     <link rel="stylesheet" type="text/css" media="all" href="<c:url value="/assets/css/bootstrap-bootswatch-flaty.css" />" id="coreCSS" />
+    <link rel="stylesheet" type="text/css" media="all" href="<c:url value="/assets/css/drawer.css" />" />
     <link rel="stylesheet" type="text/css" media="all" href="<c:url value="/assets/css/interno/dibrecommerce-admin.css" />" />
     <link rel="stylesheet" type="text/css" media="all" href="<c:url value="/assets/css/font-awesome-4.4.0.min.css" />" />
 
@@ -28,12 +29,15 @@
 
   </head>
 
-  <body>
+  <body class="drawer drawer-left drawer-responsive navbar-default">
 
-    <main id="wrapper">
+    <!-- NAVBAR FIXA -->
+    <t:menu-superior />
 
-      <!-- NAVBAR FIXA -->
-      <t:menu-superior />
+    <!-- SIDE BAR -->
+    <t:menu-lateral />
+
+    <main id="wrapper" class="drawer-overlay">
 
       <!-- CONTEUDO -->
       <main id="content">
@@ -53,6 +57,8 @@
     <!-- JS Base -->
     <script type="text/javascript" src="<c:url value="/assets/js/jquery-2.1.3.min.js" />"></script>
     <script type="text/javascript" src="<c:url value="/assets/js/bootstrap.min.js" />"></script>
+    <script type="text/javascript" src="<c:url value="/assets/js/iscroll.min.js" />"></script>
+    <script type="text/javascript" src="<c:url value="/assets/js/jquery.drawer.js" />"></script>
     <script type="text/javascript" src="<c:url value="/assets/js/interno/dibrecommerce-admin.js" />"></script>
 
     <jsp:invoke fragment="paginaBottom"/>
