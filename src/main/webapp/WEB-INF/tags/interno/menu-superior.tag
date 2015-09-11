@@ -12,9 +12,9 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand tooltip-bottom" 
+      <a class="navbar-brand tooltip-right" 
          href="<c:url value="/admin/" />"
-         title="Página inicial | Lebre Hotel Admin">
+         title="Ir ao início">
         <strong>
           <span class="hidden-sm">
             Lebre Hotel
@@ -32,90 +32,6 @@
     </div>
 
     <div class="collapse navbar-collapse" id="navbar-collapse">
-
-      <ul class="nav navbar-nav">
-
-        <li class="dropdown" id="menu-clientes">
-          <a href="<c:url value="/admin/clientes" />"
-             title="Operações relativas a Clientes"
-             class="dropdown-toggle" data-toggle="dropdown" 
-             role="button" aria-expanded="false">
-            Clientes <span class="caret"></span>
-          </a>
-          <ul class="dropdown-menu" role="menu">
-            <li>
-              <a href="<c:url value="/admin/clientes/cadastrar" />">
-                Cadastrar
-              </a>
-            </li>
-            <li>
-              <a href="<c:url value="/admin/clientes/consultar" />">
-                Consultar / Editar
-              </a>
-            </li>
-            <li class="divider"></li>
-            <li>
-              <a href="<c:url value="/admin/clientes/inativar" />">
-                Inativar
-              </a>
-            </li>
-          </ul>
-        </li>
-
-        <li class="dropdown" id="menu-reservas">
-          <a href="<c:url value="/admin/reservas" />" 
-             title="Operações relativas as Reservas"
-             class="dropdown-toggle" data-toggle="dropdown" 
-             role="button" aria-expanded="false">
-            Reservas <span class="caret"></span>
-          </a>
-          <ul class="dropdown-menu" role="menu">
-            <li>
-              <a href="<c:url value="/admin/reservas/agendar" />">
-                Agendar
-              </a>
-            </li>
-            <li>
-              <a href="<c:url value="/admin/reservas/consultar" />">
-                Consultar / Editar
-              </a>
-            </li>
-            <li class="divider"></li>
-            <li>
-              <a href="<c:url value="/admin/reservas/cancelar" />">
-                Cancelar
-              </a>
-            </li>
-          </ul>
-        </li>
-
-        <li class="dropdown" id="menu-estadias">
-          <a href="<c:url value="/admin/estadias" />" 
-             title="Operações relativas as Estadias"
-             class="dropdown-toggle" data-toggle="dropdown" 
-             role="button" aria-expanded="false">
-            Estadias <span class="caret"></span>
-          </a>
-          <ul class="dropdown-menu" role="menu">
-            <li>
-              <a href="<c:url value="/admin/estadias/iniciar" />">
-                Iniciar
-              </a>
-            </li>
-            <li>
-              <a href="<c:url value="/admin/estadias/consultar" />">
-                Consultar / Editar
-              </a>
-            </li>
-            <li>
-              <a href="<c:url value="/admin/estadias/encerrar" />">
-                Encerrar
-              </a>
-            </li>
-          </ul>
-        </li>
-
-      </ul>
 
       <ul class="nav navbar-nav navbar-right">
 
