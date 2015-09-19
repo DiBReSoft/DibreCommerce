@@ -24,7 +24,21 @@ $(document).ready(function () {
 // SERÃO LIDAS AS INSTRUÇÕES DENTRO
 // DESTE BLOCO
 $(window).load(function () {
-  
-  
+
+  comportamentoTooltip();
+  $(window).resize(comportamentoTooltip);
 
 });
+
+function comportamentoTooltip() {
+
+  if (telaLargura > 467) {
+    $("a[title], button[title], [title]").tooltip({
+      container: 'body',
+      placement: 'bottom'
+    });
+  } else {
+    $("a[title], button[title]").tooltip('destroy');
+  }
+
+}

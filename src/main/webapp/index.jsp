@@ -19,7 +19,7 @@
     <script type="text/javascript" src="<c:url value="/assets/js/bootstrap-datepicker.pt-BR.min.js" />"></script>
     <script type="text/javascript">
       $(document).ready(function () {
-        
+
         /* Preenche o Placeholder nos campos de data, com datas reais */
         var dataHoje = new Date();
         $("#reservaIn").attr("placeholder", "Ex.: " + dataHoje.getDate() + "/" + (dataHoje.getMonth() + 1) + "/" + dataHoje.getFullYear());
@@ -27,7 +27,7 @@
         dataFutura.setDate(dataHoje.getDate() + 5);
         $("#reservaOut").attr("placeholder", "Ex.: " + dataFutura.getDate() + "/" + (dataFutura.getMonth() + 1) + "/" + dataFutura.getFullYear());
         /* Preenche o Placeholder nos campos de data, com datas reais */
-        
+
         /* Inicializa o Calendário nos campos de data */
         $(".init-datepicker").datepicker({
           language: "pt-BR",
@@ -35,45 +35,361 @@
           todayBtn: "linked"
         });
         /* Inicializa o Calendário nos campos de data */
-        
-        $("#reservaIn").on("change", function() {
-          
+
+        $("#reservaIn").on("change", function () {
+
         });
-        
+
         function vertificarDataEntrada() {
-          
+
         }
-        
+
       });
     </script>
   </jsp:attribute>
 
   <jsp:body>
     <!-- Conteúdo da página index.jsp -->
-    <header class="jumbotron">
 
-      <div class="container-fluid">
+    <!-- TOPO DA PÁGINA COM AS SUGESTÕES -->
+    <header class="jumbotron fundo-foto-hotel">
 
-        <h1>Promoções</h1>
+      <div class="container">
+
+        <h1>
+          Hospede-se num dos melhores hotéis!
+        </h1>
+
         <p>
-          Aproveite o melhor do Feriado conosco em Porto Seguro!
+          Seja a negócios, breve passagem ou longas férias.
+          <br />
+          Escolha uma unidade Lebre Hotel na sua cidade-destino e aproveite
+          toda a comodidade e bem estar.
         </p>
+
         <p>
-          <a class="btn btn-lg btn-success"
-             href="/promocoes/porto-seguro">
-            Detalhes e Reservas
+          <a class="btn btn-lg btn-primary" role="button"
+             href="/LebreHotel/reservas"
+             title="Garanta seu lugar conosco">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            Faça já sua reserva
           </a>
         </p>
 
       </div>
 
     </header>
+    <!-- TOPO DA PÁGINA COM AS SUGESTÕES -->
+
+    <!-- SEÇÃO COM OFERTAS -->
+    <section>
+
+      <div class="container">
+
+        <h1 class="titulo-secao text-success">
+          Ofertas em destaque
+        </h1>
+
+        <!-- Example row of columns -->
+
+        <div class="row">
+
+          <div class="col-md-4 col-sm-6">
+
+            <div class="thumbnail thumbnail-oferta">
+
+              <img src="<c:url value='/assets/img/unidades/fake-hotel-dubai_LR.jpg' />" 
+                   alt="Fake Hotel" />
+
+              <div class="caption">
+
+                <h3>
+                  Destino #1
+                </h3>
+
+                <div class="thumbnail-oferta-descricao">                  
+                  Descrição da oferta com detalhes sucintos, informações e
+                  atrativos diferenciais.
+                </div>
+
+                <div class="thumbnail-oferta-preco">
+                  <h4>
+                    <strong>
+                      R$ 200,00
+                    </strong>
+                    <small>
+                      2x de R$ 100,00 (diária)
+                    </small>
+                  </h4>
+                </div>
+                <p>
+                  <a href="<c:url value='/reservas/destino-1' />" 
+                     class="btn btn-primary" role="button"
+                     title="Faça sua reserva online">
+                    Reservar
+                  </a>
+                  <a href="<c:url value='/hoteis/destino-1' />" 
+                     class="btn btn-success" role="button"
+                     title="Veja detalhes do hotel">
+                    Informações
+                  </a>
+                </p>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="col-md-4 col-sm-6">
+
+            <div class="thumbnail thumbnail-oferta">
+
+              <img src="<c:url value='/assets/img/unidades/fake-hotel-2_LR.jpg' />" 
+                   alt="Fake Hotel" />
+
+              <div class="caption">
+
+                <h3>
+                  Destino #2
+                </h3>
+
+                <div class="thumbnail-oferta-descricao">                  
+                  Descrição da oferta com detalhes sucintos, informações e
+                  atrativos diferenciais.
+                </div>
+
+                <div class="thumbnail-oferta-preco">
+                  <h4>
+                    <strong>
+                      R$ 200,00
+                    </strong>
+                    <small>
+                      2x de R$ 100,00 (diária)
+                    </small>
+                  </h4>
+                </div>
+                <p>
+                  <a href="<c:url value='/reservas/destino-2' />" 
+                     class="btn btn-primary" role="button"
+                     title="Faça sua reserva online">
+                    Reservar
+                  </a>
+                  <a href="<c:url value='/hoteis/destino-2' />" 
+                     class="btn btn-success" role="button"
+                     title="Veja detalhes do hotel">
+                    Informações
+                  </a>
+                </p>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="col-md-4 col-sm-6">
+
+            <div class="thumbnail thumbnail-oferta">
+
+              <img src="<c:url value='/assets/img/unidades/fake-hotel-3_LR.jpg' />" 
+                   alt="Fake Hotel" />
+
+              <div class="caption">
+
+                <h3>
+                  Destino #3
+                </h3>
+
+                <div class="thumbnail-oferta-descricao">                  
+                  Descrição da oferta com detalhes sucintos, informações e
+                  atrativos diferenciais.
+                </div>
+
+                <div class="thumbnail-oferta-preco">
+                  <h4>
+                    <strong>
+                      R$ 200,00
+                    </strong>
+                    <small>
+                      2x de R$ 100,00 (diária)
+                    </small>
+                  </h4>
+                </div>
+                <p>
+                  <a href="<c:url value='/reservas/destino-3' />" 
+                     class="btn btn-primary" role="button"
+                     title="Faça sua reserva online">
+                    Reservar
+                  </a>
+                  <a href="<c:url value='/hoteis/destino-3' />" 
+                     class="btn btn-success" role="button"
+                     title="Veja detalhes do hotel">
+                    Informações
+                  </a>
+                </p>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="col-md-4 col-sm-6">
+
+            <div class="thumbnail thumbnail-oferta">
+
+              <img src="<c:url value='/assets/img/unidades/fake-hotel-4_LR.jpg' />" 
+                   alt="Fake Hotel" />
+
+              <div class="caption">
+
+                <h3>
+                  Destino #4
+                </h3>
+
+                <div class="thumbnail-oferta-descricao">                  
+                  Descrição da oferta com detalhes sucintos, informações e
+                  atrativos diferenciais.
+                </div>
+
+                <div class="thumbnail-oferta-preco">
+                  <h4>
+                    <strong>
+                      R$ 200,00
+                    </strong>
+                    <small>
+                      2x de R$ 100,00 (diária)
+                    </small>
+                  </h4>
+                </div>
+                <p>
+                  <a href="<c:url value='/reservas/destino-4' />" 
+                     class="btn btn-primary" role="button"
+                     title="Faça sua reserva online">
+                    Reservar
+                  </a>
+                  <a href="<c:url value='/hoteis/destino-4' />" 
+                     class="btn btn-success" role="button"
+                     title="Veja detalhes do hotel">
+                    Informações
+                  </a>
+                </p>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="col-md-4 col-sm-6">
+
+            <div class="thumbnail thumbnail-oferta">
+
+              <img src="<c:url value='/assets/img/unidades/fake-hotel-5_LR.jpg' />" 
+                   alt="Fake Hotel" />
+
+              <div class="caption">
+
+                <h3>
+                  Destino #5
+                </h3>
+
+                <div class="thumbnail-oferta-descricao">                  
+                  Descrição da oferta com detalhes sucintos, informações e
+                  atrativos diferenciais.
+                </div>
+
+                <div class="thumbnail-oferta-preco">
+                  <h4>
+                    <strong>
+                      R$ 200,00
+                    </strong>
+                    <small>
+                      2x de R$ 100,00 (diária)
+                    </small>
+                  </h4>
+                </div>
+                <p>
+                  <a href="<c:url value='/reservas/destino-5' />" 
+                     class="btn btn-primary" role="button"
+                     title="Faça sua reserva online">
+                    Reservar
+                  </a>
+                  <a href="<c:url value='/hoteis/destino-5' />" 
+                     class="btn btn-success" role="button"
+                     title="Veja detalhes do hotel">
+                    Informações
+                  </a>
+                </p>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="col-md-4 col-sm-6">
+
+            <div class="thumbnail thumbnail-oferta">
+
+              <img src="<c:url value='/assets/img/unidades/fake-hotel-6_LR.jpg' />" 
+                   alt="Fake Hotel" />
+
+              <div class="caption">
+
+                <h3>
+                  Destino #6
+                </h3>
+
+                <div class="thumbnail-oferta-descricao">                  
+                  Descrição da oferta com detalhes sucintos, informações e
+                  atrativos diferenciais.
+                </div>
+
+                <div class="thumbnail-oferta-preco">
+                  <h4>
+                    <strong>
+                      R$ 200,00
+                    </strong>
+                    <small>
+                      2x de R$ 100,00 (diária)
+                    </small>
+                  </h4>
+                </div>
+                <p>
+                  <a href="<c:url value='/reservas/destino-6' />" 
+                     class="btn btn-primary" role="button"
+                     title="Faça sua reserva online">
+                    Reservar
+                  </a>
+                  <a href="<c:url value='/hoteis/destino-6' />" 
+                     class="btn btn-success" role="button"
+                     title="Veja detalhes do hotel">
+                    Informações
+                  </a>
+                </p>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <a href="<c:url value='/ofertas' />"
+           title="Veja mais ofertas"
+           class="btn btn-lg btn-info btn-block btn-ofertas">
+          <span class="glyphicon glyphicon-plus"></span>
+          VEJA MAIS OFERTAS
+        </a>
+
+      </div>
+
+    </section>
+    <!-- SEÇÃO COM OFERTAS -->
+
 
     <section>
 
-      <div class="container-fluid">
+      <div class="container">
 
-        <div class="col-lg-6">
+        <div class="col-md-8">
 
           <h2>
             Hospede-se conosco
@@ -180,6 +496,9 @@
 
                       <select class="form-control" 
                               id="reservaHotel" name="reservaHotel">
+                        <option disabled="disabled" selected>
+                          Selecione uma de nossas unidades
+                        </option>
                         <option value="1">
                           SP | São Paulo
                         </option>
@@ -217,38 +536,6 @@
 
         </div>
 
-        <div class="col-lg-6">
-
-          <h2 class="text-success">
-            Recomendamos para você
-          </h2>
-
-          <div class="panel panel-success">
-
-            <div class="panel-body">
-
-              <div class="hidden-sm hidden-xs" style="padding: 8px 0px;"></div>
-
-              <ul class="list-group">
-                <li class="list-group-item">
-                  <span class="badge">14</span>
-                  Unidade São Paulo
-                </li>
-                <li class="list-group-item">
-                  <span class="badge">2</span>
-                  Unidade Rio de Janeiro
-                </li>
-                <li class="list-group-item">
-                  <span class="badge">1</span>
-                  Unidade Pernambuco
-                </li>
-              </ul>
-
-            </div>
-
-          </div>
-
-        </div>
       </div>
 
     </section>

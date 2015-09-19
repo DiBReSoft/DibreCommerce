@@ -15,11 +15,115 @@ header.jumbotron h1:first-of-type {
   margin-top: 0;
 }
 
-footer > .container-fluid > ul.nav-pills > li:first-of-type {
-  margin-right: -15px !important;
+body {
+  padding-top: 60px;
 }
-footer > .container-fluid > ul.nav-pills > li:nth-child(2) {
-  margin-left: -15px !important;
+
+.navbar-brand {
+  padding-left: 45px;
+  background-image: url('../img/logo-lebre.svg');
+  background-size: 25px;
+  background-position: 15px 15px;
+  background-repeat: no-repeat;
+}
+
+.navbar-form,
+.navbar-btn {
+  margin-top: 12px;
+}
+
+.navbar-form input[type=text],
+.navbar-form input[type=password] {
+  height: 35px;
+}
+
+.navbar-form .btn,
+.navbar-btn {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+@media(min-width: 768px) and (max-width: 991px) {
+  .navbar-form input[type=text],
+  .navbar-form input[type=password] {
+    max-width: 95px;
+  }
+}
+
+.navbar .navbar-btn.navbar-right {
+  margin-left: 10px !important;
+}
+
+.navbar .navbar-btn.navbar-right:first-of-type {
+  margin-right: 0px;
+}
+
+.fundo-foto-hotel {
+  background-image: url('../img/unidades/fake-hotel_LR.jpg');
+  background-size: cover;
+  background-position: center;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.35);
+}
+
+.fundo-foto-hotel .btn {
+  opacity: 0.75;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.35);
+  transition: 0.2s;
+}
+.fundo-foto-hotel .btn:hover {
+  opacity: 1;
+}
+
+section {
+  padding: 40px 0px;
+}
+
+section .titulo-secao {
+  margin: 0px 0px 35px 0px;
+}
+
+.thumbnail-oferta-descricao {
+  height: 45px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.thumbnail-oferta .btn {
+  margin-top: 8px;
+  width: 49%;
+}
+
+@media(min-width: 768px) {
+}
+
+#login .modal-title small {
+  display: block;
+}
+#login .modal-body .form-horizontal {
+  max-width: 350px;
+  margin: 5px auto 0px auto !important;
+}
+#login .modal-body .form-horizontal input {
+  margin-bottom: 10px;
+}
+#login .modal-footer label {
+  margin-top: 10px;
+  display: block;
+  width: 100%;
+}
+
+.btn-ofertas {
+  max-width: 380px;
+  margin: 10px auto !important;
+}
+
+footer {
+  border-top: 1px solid rgba(0,0,0,0.15);
+}
+
+footer .container {
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 label[for] {
