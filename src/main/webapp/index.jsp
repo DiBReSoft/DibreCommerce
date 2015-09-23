@@ -122,18 +122,29 @@
                     </small>
                   </h4>
                 </div>
-                <p>
-                  <a href="<c:url value='/reservas/destino-1' />" 
-                     class="btn btn-primary" role="button"
-                     title="Faça sua reserva online">
-                    Reservar
-                  </a>
-                  <a href="<c:url value='/hoteis/destino-1' />" 
-                     class="btn btn-success" role="button"
-                     title="Veja detalhes do hotel">
-                    Informações
-                  </a>
-                </p>
+
+                <div class="thumbnail-oferta-links row">
+
+                  <div class="col-xs-6">
+                    <a href="<c:url value='/hoteis/destino-1' />" 
+                       class="btn btn-block btn-link" role="button"
+                       title="Veja detalhes do hotel">
+                      <i class="fa fa-fw fa-plus"></i>
+                      Informações
+                    </a>
+                  </div>
+
+                  <div class="col-xs-6">
+                    <a href="<c:url value='/reservas/destino-1' />" 
+                       class="btn btn-block btn-success" role="button"
+                       title="Faça sua reserva online">
+                      <i class="fa fa-fw fa-suitcase"></i>
+                      Reservar
+                    </a>
+                  </div>
+
+                </div>
+
               </div>
 
             </div>
@@ -168,18 +179,29 @@
                     </small>
                   </h4>
                 </div>
-                <p>
-                  <a href="<c:url value='/reservas/destino-2' />" 
-                     class="btn btn-primary" role="button"
-                     title="Faça sua reserva online">
-                    Reservar
-                  </a>
-                  <a href="<c:url value='/hoteis/destino-2' />" 
-                     class="btn btn-success" role="button"
-                     title="Veja detalhes do hotel">
-                    Informações
-                  </a>
-                </p>
+
+                <div class="thumbnail-oferta-links row">
+
+                  <div class="col-xs-6">
+                    <a href="<c:url value='/hoteis/destino-2' />" 
+                       class="btn btn-block btn-link" role="button"
+                       title="Veja detalhes do hotel">
+                      <i class="fa fa-fw fa-plus"></i>
+                      Informações
+                    </a>
+                  </div>
+
+                  <div class="col-xs-6">
+                    <a href="<c:url value='/reservas/destino-2' />" 
+                       class="btn btn-block btn-success" role="button"
+                       title="Faça sua reserva online">
+                      <i class="fa fa-fw fa-suitcase"></i>
+                      Reservar
+                    </a>
+                  </div>
+
+                </div>
+                       
               </div>
 
             </div>
@@ -214,18 +236,29 @@
                     </small>
                   </h4>
                 </div>
-                <p>
-                  <a href="<c:url value='/reservas/destino-3' />" 
-                     class="btn btn-primary" role="button"
-                     title="Faça sua reserva online">
-                    Reservar
-                  </a>
-                  <a href="<c:url value='/hoteis/destino-3' />" 
-                     class="btn btn-success" role="button"
-                     title="Veja detalhes do hotel">
-                    Informações
-                  </a>
-                </p>
+
+                <div class="thumbnail-oferta-links row">
+
+                  <div class="col-xs-6">
+                    <a href="<c:url value='/hoteis/destino-3' />" 
+                       class="btn btn-block btn-link" role="button"
+                       title="Veja detalhes do hotel">
+                      <i class="fa fa-fw fa-plus"></i>
+                      Informações
+                    </a>
+                  </div>
+
+                  <div class="col-xs-6">
+                    <a href="<c:url value='/reservas/destino-3' />" 
+                       class="btn btn-block btn-success" role="button"
+                       title="Faça sua reserva online">
+                      <i class="fa fa-fw fa-suitcase"></i>
+                      Reservar
+                    </a>
+                  </div>
+
+                </div>
+                       
               </div>
 
             </div>
@@ -260,18 +293,29 @@
                     </small>
                   </h4>
                 </div>
-                <p>
-                  <a href="<c:url value='/reservas/destino-4' />" 
-                     class="btn btn-primary" role="button"
-                     title="Faça sua reserva online">
-                    Reservar
-                  </a>
-                  <a href="<c:url value='/hoteis/destino-4' />" 
-                     class="btn btn-success" role="button"
-                     title="Veja detalhes do hotel">
-                    Informações
-                  </a>
-                </p>
+
+                <div class="thumbnail-oferta-links row">
+
+                  <div class="col-xs-6">
+                    <a href="<c:url value='/hoteis/destino-4' />" 
+                       class="btn btn-block btn-link" role="button"
+                       title="Veja detalhes do hotel">
+                      <i class="fa fa-fw fa-plus"></i>
+                      Informações
+                    </a>
+                  </div>
+
+                  <div class="col-xs-6">
+                    <a href="<c:url value='/reservas/destino-4' />" 
+                       class="btn btn-block btn-success" role="button"
+                       title="Faça sua reserva online">
+                      <i class="fa fa-fw fa-suitcase"></i>
+                      Reservar
+                    </a>
+                  </div>
+
+                </div>
+                       
               </div>
 
             </div>
@@ -306,18 +350,29 @@
                     </small>
                   </h4>
                 </div>
-                <p>
-                  <a href="<c:url value='/reservas/destino-5' />" 
-                     class="btn btn-primary" role="button"
-                     title="Faça sua reserva online">
-                    Reservar
-                  </a>
-                  <a href="<c:url value='/hoteis/destino-5' />" 
-                     class="btn btn-success" role="button"
-                     title="Veja detalhes do hotel">
-                    Informações
-                  </a>
-                </p>
+
+                <div class="thumbnail-oferta-links row">
+
+                  <div class="col-xs-6">
+                    <a href="<c:url value='/hoteis/destino-5' />" 
+                       class="btn btn-block btn-link" role="button"
+                       title="Veja detalhes do hotel">
+                      <i class="fa fa-fw fa-plus"></i>
+                      Informações
+                    </a>
+                  </div>
+
+                  <div class="col-xs-6">
+                    <a href="<c:url value='/reservas/destino-5' />" 
+                       class="btn btn-block btn-success" role="button"
+                       title="Faça sua reserva online">
+                      <i class="fa fa-fw fa-suitcase"></i>
+                      Reservar
+                    </a>
+                  </div>
+
+                </div>
+                       
               </div>
 
             </div>
@@ -351,19 +406,30 @@
                       2x de R$ 100,00 (diária)
                     </small>
                   </h4>
+                </div>                
+
+                <div class="thumbnail-oferta-links row">
+
+                  <div class="col-xs-6">
+                    <a href="<c:url value='/hoteis/destino-6' />" 
+                       class="btn btn-block btn-link" role="button"
+                       title="Veja detalhes do hotel">
+                      <i class="fa fa-fw fa-plus"></i>
+                      Informações
+                    </a>
+                  </div>
+
+                  <div class="col-xs-6">
+                    <a href="<c:url value='/reservas/destino-6' />" 
+                       class="btn btn-block btn-success" role="button"
+                       title="Faça sua reserva online">
+                      <i class="fa fa-fw fa-suitcase"></i>
+                      Reservar
+                    </a>
+                  </div>
+
                 </div>
-                <p>
-                  <a href="<c:url value='/reservas/destino-6' />" 
-                     class="btn btn-primary" role="button"
-                     title="Faça sua reserva online">
-                    Reservar
-                  </a>
-                  <a href="<c:url value='/hoteis/destino-6' />" 
-                     class="btn btn-success" role="button"
-                     title="Veja detalhes do hotel">
-                    Informações
-                  </a>
-                </p>
+                
               </div>
 
             </div>
@@ -374,8 +440,8 @@
 
         <a href="<c:url value='/ofertas' />"
            title="Veja mais ofertas"
-           class="btn btn-lg btn-info btn-block btn-ofertas">
-          <span class="glyphicon glyphicon-plus"></span>
+           class="btn btn-lg btn-primary btn-block btn-ofertas">
+          <i class="fa fa-fw fa-plus"></i>
           VEJA MAIS OFERTAS
         </a>
 
@@ -391,9 +457,9 @@
 
         <div class="col-md-8">
 
-          <h2>
+          <h1 class="titulo-secao">
             Hospede-se conosco
-          </h2>
+          </h1>
 
           <div class="panel panel-primary">
 

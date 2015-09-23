@@ -58,6 +58,10 @@ body {
   margin-right: 0px;
 }
 
+section:nth-child(even) {
+  background-color: #f4f4f4;
+}
+
 .fundo-foto-hotel {
   background-image: url('../img/unidades/fake-hotel_LR.jpg');
   background-size: cover;
@@ -82,15 +86,19 @@ section .titulo-secao {
   margin: 0px 0px 35px 0px;
 }
 
+.thumbnail-oferta .caption h3 {
+  margin-top: 5px;
+}
+
 .thumbnail-oferta-descricao {
   height: 45px;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.thumbnail-oferta .btn {
-  margin-top: 8px;
-  width: 49%;
+.thumbnail-oferta-links {
+  margin-top: 15px;
+  margin-bottom: 0px;
 }
 
 @media(min-width: 768px) {
