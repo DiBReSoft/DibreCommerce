@@ -99,7 +99,7 @@
           <div class="modal-footer">
 
             <a role="button" class="btn btn-block btn-sm btn-success"
-               href="/LebreHotel/cadastrar">
+               href="<c:url value='/me-cadastrar.jsp' />">
               ME CADASTRAR
             </a>
 

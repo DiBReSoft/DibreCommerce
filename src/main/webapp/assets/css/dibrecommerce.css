@@ -50,6 +50,13 @@ body {
   }
 }
 
+.navbar-nav.navbar-right li:last-child {
+  margin-right: 15px;
+}
+.navbar-nav.navbar-right .navbar-btn {
+  margin-left: 15px;
+}
+
 .navbar .navbar-btn.navbar-right {
   margin-left: 10px !important;
 }
@@ -60,6 +67,17 @@ body {
 
 section:nth-child(even) {
   background-color: #f4f4f4;
+}
+
+.header-generico {
+  background-image: url('../img/genericos/geometrico-abstrato.png');
+  background-size: cover;
+  min-height: 150px;
+  padding: 1em 0;
+}
+
+.header-generico h1 {
+  font-size: 50px;
 }
 
 .fundo-foto-hotel {
