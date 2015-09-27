@@ -103,11 +103,13 @@
               ME CADASTRAR
             </a>
 
+            <!--
             <label class="text-center">
               OU
               <br />
               cadastra-se com redes sociais
             </label>
+            -->
 
           </div>
 

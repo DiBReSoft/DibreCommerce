@@ -39,146 +39,218 @@
 
       <div class="container">
 
-        <div class="col-md-8">
+        <h1 style="margin-top: 0;">
+          Identificação
+        </h1>
 
-          <h1 class="titulo-secao">
-            Identificação
-          </h1>
+        <p class="lead">
+          Cadastre-se na rede de hotéis que mais surpreende no Brasil 
+          (não se preocupe, seus dados serão protegidos), aproveite promoções, 
+          ofertas exclusivas e agilize suas reservas.
+        </p>
 
-          <div class="panel panel-primary">
+        <div class="row">
 
-            <div class="panel-body">
+          <div class="col-md-2"></div>
 
-              <div class="hidden-sm hidden-xs" style="padding: 8px 0px;"></div>
+          <div class="col-md-8">
 
-              <!-- Guia de uso dos Forms: http://getbootstrap.com/css/#forms -->
-              <form method="post" action="reservar" enctype="utf-8">
+            <div class="panel panel-primary">
 
-                <div class="col-md-6">
+              <div class="panel-body">
 
-                  <div class="form-group" id="reservaInContainer">
+                <div class="hidden-sm hidden-xs" style="padding: 8px 0px;"></div>
 
-                    <label for="reservaIn" class="hidden-lg hidden-md">
-                      Data de Entrada:
-                    </label>
+                <!-- Guia de uso dos Forms: http://getbootstrap.com/css/#forms -->
+                <form class="form-me-cadastrar"
+                      method="post" action="reservar" enctype="utf-8">
 
-                    <div class="input-group">
+                  <div class="col-md-8">
 
-                      <div class="input-group-addon">
+                    <div class="form-group" id="cadastroNomeContainer">
 
-                        <label for="reservaIn">
+                      <label for="cadastroNome">
+                        Nome completo:
+                      </label>
 
-                          <i class="fa fa-fw fa-calendar-plus-o"></i>
+                      <div class="input-group">
 
-                          <span class="hidden-sm hidden-xs">
-                            Entrada: 
-                          </span>
+                        <div class="input-group-addon">
 
-                        </label>
+                          <label for="cadastroNome">
+
+                            <i class="fa fa-fw fa-user"></i>
+
+                          </label>
+
+                        </div>
+
+                        <input type="text" class="form-control" 
+                               id="cadastroNome" name="cadastroNome" />
 
                       </div>
-
-                      <input type="text" class="form-control init-datepicker" id="reservaIn" />
 
                     </div>
 
                   </div>
 
-                </div>
+                  <div class="col-md-4">
 
-                <div class="col-md-6">
+                    <div class="form-group">
 
-                  <div class="form-group" id="reservaOutContainer">
+                      <label class="control-label" for="cadastroSexo">
+                        Sexo:
+                      </label>
 
-                    <label for="reservaOut" class="hidden-lg hidden-md">
-                      Data de Saída:
-                    </label>
+                      <div class="input-group">
 
-                    <div class="input-group">
+                        <div class="input-group-addon">
 
-                      <div class="input-group-addon">
+                          <label for="cadastroSexo">
 
-                        <label for="reservaOut">
+                            <i class="fa fa-fw fa-venus-mars"></i>
 
-                          <i class="fa fa-fw fa-calendar-minus-o"></i>
+                          </label>
 
-                          <span class="hidden-sm hidden-xs">
-                            Saída:
-                          </span>
+                        </div>
 
-                        </label>
+                        <select class="form-control" 
+                                id="cadastroSexo" name="cadastroSexo">
+                          <option disabled="disabled" selected>
+                            Selecionar opção
+                          </option>
+                          <option value="f">
+                            Feminino
+                          </option>
+                          <option value="m">
+                            Masculino
+                          </option>
+                        </select>
 
                       </div>
-
-                      <input type="text" class="form-control init-datepicker" id="reservaOut" />
 
                     </div>
 
                   </div>
 
-                </div>
+                  <div class="clearfix"></div>
 
-                <div class="clearfix"></div>
+                  <div class="col-md-4">
 
-                <div class="col-md-8">
+                    <div class="form-group" id="cadastroNascimentoContainer">
 
-                  <div class="form-group">
+                      <label for="cadastroNascimento">
+                        Data de Nascimento:
+                      </label>
 
-                    <label class="control-label hidden-lg hidden-md" for="reservaHotel">
-                      Selecione uma unidade:
-                    </label>
+                      <div class="input-group">
 
-                    <div class="input-group">
+                        <div class="input-group-addon">
 
-                      <div class="input-group-addon">
+                          <label for="cadastroNascimento">
+                            <i class="fa fa-fw fa-calendar"></i>
+                          </label>
 
-                        <label for="focusedInput">
+                        </div>
 
-                          <i class="fa fa-fw fa-map-marker"></i>
-
-                          <span class="hidden-sm hidden-xs">
-                            Unidade:
-                          </span>
-
-                        </label>
+                        <input type="text" class="form-control init-datepicker" 
+                               id="cadastroNascimento" name="cadastroNascimento" />
 
                       </div>
-
-                      <select class="form-control" 
-                              id="reservaHotel" name="reservaHotel">
-                        <option disabled="disabled" selected>
-                          Selecione uma de nossas unidades
-                        </option>
-                        <option value="1">
-                          SP | São Paulo
-                        </option>
-                        <option value="2">
-                          SP | São José dos Campos
-                        </option>
-                      </select>
 
                     </div>
 
                   </div>
 
-                </div>
+                  <div class="col-md-4">
 
-                <div class="col-md-4">
+                    <div class="form-group" id="cadastroCPFContainer">
 
-                  <button id="reservaCotar" type="button" class="btn btn-primary btn-block disabled">
-                    Cotar Preço
-                    <i class="fa fa-fw fa-search"></i>
-                  </button>
+                      <label for="cadastroCPF"
+                             title="Cadastro de Pessoa Física de Cidadãos Brasileiros">
+                        CPF:
+                      </label>
 
-                </div>
+                      <div class="input-group">
 
-              </form>        
+                        <div class="input-group-addon">
 
-            </div>
+                          <label for="cadastroCPF">
+                            <i class="fa fa-fw fa-barcode"></i>
+                          </label>
 
-            <div class="panel-footer text-center">
+                        </div>
 
-              Lebre Hotel | Nos melhores locais
+                        <input type="text" class="form-control init-datepicker" 
+                               id="cadastroCPF" name="cadastroCPF" />
+
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                  <div class="col-md-4">
+
+                    <div class="form-group" id="cadastroRGContainer">
+
+                      <label for="cadastroRG"
+                             title="Registro Geral de Cidadãos Brasileiros">
+                        RG:
+                      </label>
+
+                      <div class="input-group">
+
+                        <div class="input-group-addon">
+
+                          <label for="cadastroRG">
+                            <i class="fa fa-fw fa-barcode"></i>
+                          </label>
+
+                        </div>
+
+                        <input type="text" class="form-control init-datepicker" 
+                               id="cadastroRG" name="cadastroRG" />
+
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                  <div class="clearfix"></div>
+
+                  <div class="row form-me-cadastrar-botoes">
+
+                    <div class="col-md-2"></div>
+
+                    <div class="col-md-4">
+
+                      <button id="cadastroLimpar" type="reset" class="btn btn-block btn-link">
+                        <i class="fa fa-fw fa-lg fa-eraser"></i>LIMPAR
+                      </button>
+
+                    </div>
+
+                    <div class="col-md-4">
+
+                      <button id="cadastroCadastrar" type="button" class="btn btn-block btn-primary disabled">
+                        CADASTRAR<i class="fa fa-fw fa-lg fa-check"></i>
+                      </button>
+
+                    </div>
+
+                  </div>
+
+                </form>        
+
+              </div>
+
+              <div class="panel-footer text-center">
+
+                Lebre Hotel | Nos melhores locais
+
+              </div>
 
             </div>
 
