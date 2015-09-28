@@ -11,10 +11,47 @@
   <jsp:attribute name="paginaHead">
     <!-- Adiciona CSS e outros que vão no <head> da página -->
     <link rel="stylesheet" type="text/css" href="<c:url value="/assets/css/bootstrap-datepicker.min.css" />" />
+    <link rel="stylesheet" type="text/css" href="<c:url value="/assets/css/bootstrap-toggle.css" />" />
   </jsp:attribute>
 
   <jsp:attribute name="paginaBottom">
     <!-- Adiciona JS e outros que vão no final da página -->
+
+    <script type="text/javascript" src="<c:url value="/assets/js/jquery.maskedinput.min.js" />"></script>
+    <script type="text/javascript" src="<c:url value="/assets/js/bootstrap-toggle.min.js" />"></script>
+    <script type="text/javascript">
+
+
+      $(document).ready(function () {
+
+        $("#cadastroNewsletter").bootstrapToggle();
+
+        $('#cadastroRG').mask('**.999.999-*');
+        $('#cadastroCPF').mask('999.999.999-99');
+        $('#cadastroNascimento').mask('**/**/****');
+
+        // verificação de email
+        $("#cadastroEmail").focus(function () {
+          $("#cadastroEmailContainer .input-group").removeClass("has-success");
+        });
+        $("#cadastroEmail").blur(function () {
+          var email = $("#cadastroEmail");
+          if (email.val() !== "") {
+            if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email.val()))) {
+              $("#cadastroEmailContainer .input-group").addClass("has-error");
+              email.focus();
+              return false;
+            } else {
+              $("#cadastroEmailContainer .input-group").removeClass("has-error");
+              $("#cadastroEmailContainer .input-group").addClass("has-success");
+            }
+          }
+        });
+        // verificação de email
+
+      });
+
+    </script>
 
   </jsp:attribute>
 
@@ -167,7 +204,7 @@
                     <div class="form-group" id="cadastroCPFContainer">
 
                       <label for="cadastroCPF"
-                             title="Cadastro de Pessoa Física de Cidadãos Brasileiros">
+                             title="Cadastro de Pessoa Física dos Cidadãos Brasileiros">
                         CPF:
                       </label>
 
@@ -181,7 +218,7 @@
 
                         </div>
 
-                        <input type="text" class="form-control init-datepicker" 
+                        <input type="text" class="form-control" 
                                id="cadastroCPF" name="cadastroCPF" />
 
                       </div>
@@ -195,7 +232,7 @@
                     <div class="form-group" id="cadastroRGContainer">
 
                       <label for="cadastroRG"
-                             title="Registro Geral de Cidadãos Brasileiros">
+                             title="Registro Geral dos Cidadãos Brasileiros">
                         RG:
                       </label>
 
@@ -209,8 +246,63 @@
 
                         </div>
 
-                        <input type="text" class="form-control init-datepicker" 
+                        <input type="text" class="form-control" 
                                id="cadastroRG" name="cadastroRG" />
+
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                  <div class="clearfix"></div>
+
+                  <div class="col-md-8">
+
+                    <div class="form-group" id="cadastroEmailContainer">
+
+                      <label for="cadastroEmail"
+                             title="Registro Geral dos Cidadãos Brasileiros">
+                        E-mail:
+                      </label>
+
+                      <div class="input-group">
+
+                        <div class="input-group-addon">
+
+                          <label for="cadastroEmail">
+                            <i class="fa fa-fw fa-envelope"></i>
+                          </label>
+
+                        </div>
+
+                        <input type="email" class="form-control" 
+                               id="cadastroEmail" name="cadastroEmail" />
+
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                  <div class="col-md-4">
+
+                    <div class="form-group" id="cadastroNewsletterContainer">
+
+                      <label title="Informes, promoções e ofertas exclusivas por e-mail">
+                        Aceita <span class="hidden-md">receber</span> Newsletter?
+                      </label>
+
+                      <div class="checkbox" style="margin: 0;">
+
+                        <label>
+                          <input type="checkbox" checked="true" 
+                                 data-toggle="toggle" 
+                                 data-on="<i class='fa fa-check-circle'></i> SIM" 
+                                 data-off="<i class='fa fa-times-circle'></i> NÃO"
+                                 id="cadastroNewsletter" name="cadastroNewsletter"  />
+                          via e-mail
+                        </label>                        
 
                       </div>
 
@@ -227,7 +319,7 @@
                     <div class="col-md-4">
 
                       <button id="cadastroLimpar" type="reset" class="btn btn-block btn-link">
-                        <i class="fa fa-fw fa-lg fa-eraser"></i>LIMPAR
+                        LIMPAR<i class="fa fa-fw fa-lg fa-eraser"></i>
                       </button>
 
                     </div>
@@ -235,7 +327,7 @@
                     <div class="col-md-4">
 
                       <button id="cadastroCadastrar" type="button" class="btn btn-block btn-primary disabled">
-                        CADASTRAR<i class="fa fa-fw fa-lg fa-check"></i>
+                        <i class="fa fa-fw fa-lg fa-check"></i>CADASTRAR
                       </button>
 
                     </div>

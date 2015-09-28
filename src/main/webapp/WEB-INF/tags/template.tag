@@ -40,9 +40,9 @@
     <!-- JS Base -->
     <script type="text/javascript" src="<c:url value="/assets/js/jquery-1.11.3.min.js" />"></script>
     <script type="text/javascript" src="<c:url value="/assets/js/bootstrap.min.js" />"></script>
+    <script type="text/javascript" src="<c:url value="/assets/js/bootstrap-datepicker.min.js" />"></script>
+    <script type="text/javascript" src="<c:url value="/assets/js/bootstrap-datepicker.pt-BR.min.js" />"></script>
     <script type="text/javascript" src="<c:url value="/assets/js/dibrecommerce.js" />"></script>
-
-    <script type="text/javascript" src="<c:url value="/assets/js/bootstrap-datepicker.js" />"></script>
 
     <jsp:invoke fragment="paginaBottom"/>
 
