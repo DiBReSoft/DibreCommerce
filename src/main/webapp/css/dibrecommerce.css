@@ -164,6 +164,10 @@ section .titulo-secao {
   width: 100%;
 }
 
+#login .form-group {
+  margin: 0;
+}
+
 .btn-ofertas {
   max-width: 380px;
   margin: 10px auto !important;

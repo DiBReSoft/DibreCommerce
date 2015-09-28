@@ -17,6 +17,7 @@
     <link rel="stylesheet" type="text/css" href="#{request.contextPath}/css/bootstrap_bootswatch-flaty.min.css" />
     <link rel="stylesheet" type="text/css" href="#{request.contextPath}/css/font-awesome-4.4.0.min.css" />
     <link rel="stylesheet" type="text/css" href="#{request.contextPath}/css/bootstrap-toggle.css" />
+    <link rel="stylesheet" type="text/css" href="#{request.contextPath}/css/bootstrap-datepicker.min.css" />
     <link rel="stylesheet" type="text/css" href="#{request.contextPath}/css/dibrecommerce.css" />
 
     <ui:insert name="pagina-head" />
@@ -36,9 +37,9 @@
     <script type="text/javascript" src="#{request.contextPath}/js/bootstrap-datepicker.min.js" />
     <script type="text/javascript" src="#{request.contextPath}/js/bootstrap-datepicker.pt-BR.min.js" />
     <script type="text/javascript" src="#{request.contextPath}/js/bootstrap-toggle.min.js" />
-    
+
     <ui:insert name="pagina-bottom" />
-    
+
     <script type="text/javascript" src="#{request.contextPath}/js/dibrecommerce.js" />
 
     <!-- Modal para seleção de Tema do Sistema -->
@@ -64,17 +65,23 @@
             <form class="form-horizontal"
                   method="post" action="login">
 
-              <label for="usuarioCredencial">
-                Login:
-              </label>
-              <input type="text" class="form-control"
-                     name="usuarioCredencial" id="usuarioCredencial"
-                     placeholder="Endereço de e-mail" />
+              <div class="form-group" id="usuarioCredencialContainer">
+
+                <label for="usuarioCredencial">
+                  Login:
+                </label>
+                <input type="email" class="form-control"
+                       required="required"
+                       name="usuarioCredencial" id="usuarioCredencial"
+                       placeholder="Endereço de e-mail" />
+
+              </div>
 
               <label for="usuarioSenha">
                 Senha:
               </label>
               <input type="password" class="form-control"
+                     required="required"
                      name="usuarioSenha" id="usuarioSenha"
                      placeholder="*************" />
 
@@ -112,6 +119,27 @@
       </div>
     </div>
     <!-- Modal para seleção de Tema do Sistema -->
+
+    <script type="text/javascript">
+      // verificação de email
+      $("#usuarioCredencial").focus(function () {
+        $("#usuarioCredencialContainer").removeClass("has-success");
+      });
+      $("#usuarioCredencial").blur(function () {
+        var email = $("#usuarioCredencial");
+        if (email.val() !== "") {
+          if (!(/^\w([\.-]?\w)*@\w([\.-]?\w)*(\.\w{2,3})$/.test(email.val()))) {
+            $("#usuarioCredencialContainer").addClass("has-error");
+            email.focus();
+            return false;
+          } else {
+            $("#usuarioCredencialContainer").removeClass("has-error");
+            $("#usuarioCredencialContainer").addClass("has-success");
+          }
+        }
+      });
+      // verificação de email
+    </script>
 
   </h:body>
 
