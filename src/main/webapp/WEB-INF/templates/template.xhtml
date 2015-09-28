@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+  <h:head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <meta name="author" content="Fabio Ernnani, Larissa Franca, Luciano Lourenço, Renato Brandão, Thiago de Melo, Udimberto Junior" />
+
+    <title id="pagina-titulo"><ui:insert name="pagina-titulo" /> @ Lebre Hotel</title>
+
+    <link rel="shortcut icon" href="#{request.contextPath}/img/favicon.ico" type="image/x-icon" />
+
+    <link rel="stylesheet" type="text/css" href="#{request.contextPath}/css/bootstrap_bootswatch-flaty.min.css" />
+    <link rel="stylesheet" type="text/css" href="#{request.contextPath}/css/font-awesome-4.4.0.min.css" />
+    <link rel="stylesheet" type="text/css" href="#{request.contextPath}/css/bootstrap-toggle.css" />
+    <link rel="stylesheet" type="text/css" href="#{request.contextPath}/css/dibrecommerce.css" />
+
+    <ui:insert name="pagina-head" />
+
+  </h:head>
+
+  <h:body>
+
+    <ui:include src="/WEB-INF/templates/menu-superior.xhtml" />
+
+    <ui:insert name="pagina-conteudo" />
+
+    <ui:include src="/WEB-INF/templates/rodape.xhtml" />
+
+    <script type="text/javascript" src="#{request.contextPath}/js/jquery-1.11.3.min.js" />
+    <script type="text/javascript" src="#{request.contextPath}/js/bootstrap.min.js" />
+    <script type="text/javascript" src="#{request.contextPath}/js/bootstrap-datepicker.min.js" />
+    <script type="text/javascript" src="#{request.contextPath}/js/bootstrap-datepicker.pt-BR.min.js" />
+    <script type="text/javascript" src="#{request.contextPath}/js/bootstrap-toggle.min.js" />
+    
+    <ui:insert name="pagina-bottom" />
+    
+    <script type="text/javascript" src="#{request.contextPath}/js/dibrecommerce.js" />
+
+    <!-- Modal para seleção de Tema do Sistema -->
+    <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="loginLabel">
+      <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+              <span aria-hidden="true">
+                x
+              </span>
+            </button>
+            <h3 class="modal-title" id="loginLabel">
+              Entrar
+              <small>
+                Faça uma nova reserva ou gerencie as existentes
+              </small>
+            </h3>
+          </div>
+
+          <div class="modal-body text-center">
+
+            <form class="form-horizontal"
+                  method="post" action="login">
+
+              <label for="usuarioCredencial">
+                Login:
+              </label>
+              <input type="text" class="form-control"
+                     name="usuarioCredencial" id="usuarioCredencial"
+                     placeholder="Endereço de e-mail" />
+
+              <label for="usuarioSenha">
+                Senha:
+              </label>
+              <input type="password" class="form-control"
+                     name="usuarioSenha" id="usuarioSenha"
+                     placeholder="*************" />
+
+              <button type="submit" class="btn btn-block btn-sm btn-primary">
+                LOGIN
+              </button>
+
+              <h:outputLink role="button" styleClass="btn btn-block btn-sm btn-link"
+                            value="#{request.contextPath}/recuperar-senha">
+                RECUPERAR SENHA
+              </h:outputLink>
+
+            </form>
+
+          </div>
+
+          <div class="modal-footer">
+
+            <h:outputLink role="button" styleClass="btn btn-block btn-sm btn-success"
+                          value="#{request.contextPath}/me-cadastrar">
+              ME CADASTRAR
+            </h:outputLink>
+
+            <!--
+            <label class="text-center">
+              OU
+              <br />
+              cadastra-se com redes sociais
+            </label>
+            -->
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- Modal para seleção de Tema do Sistema -->
+
+  </h:body>
+
+</html>
+

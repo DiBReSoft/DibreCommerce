@@ -3,6 +3,14 @@ body {
   line-height: 1.6;
 }
 
+.navbar-brand {
+  padding-left: 45px;
+  background-image: url('../img/logo-lebre.svg');
+  background-size: 25px;
+  background-repeat: no-repeat;
+  background-position: 10px 15px;
+}
+
 header.jumbotron h1:first-of-type {
   margin-top: 0;
 }
@@ -21,6 +29,7 @@ body {
   background-size: 25px;
   background-position: 15px 15px;
   background-repeat: no-repeat;
+  font-weight: bolder;
 }
 
 .navbar-form,

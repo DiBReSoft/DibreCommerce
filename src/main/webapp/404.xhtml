@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+  <ui:composition template="/WEB-INF/templates/template.xhtml">
+
+    <ui:define name="pagina-titulo">Conteúdo não encontrado</ui:define>
+
+    <ui:define name="pagina-conteudo">
+
+      <!-- TOPO, COM O TÍTULO DA PÁGINA -->
+      <header class="header-generico">
+
+        <div class="container">
+
+          <h1>
+            Ops...
+            <i class="fa fa-fw fa-meh-o"></i>
+          </h1>
+          <p class="lead">
+            Desculpe-nos.
+            Algo aconteceu de errado ao tentar acessar este conteúdo.
+          </p>
+
+        </div>
+
+      </header>
+      <!-- TOPO, COM O TÍTULO DA PÁGINA -->
+
+      <section>
+
+        <div class="container">
+
+          <h1 style="margin-top: 0;">
+            A página solicitada não pôde ser encontrada
+          </h1>
+
+          <p class="lead">
+            Veja abaixo as possíveis causas para este acontecimento:
+          </p>
+
+          <div class="row">
+            
+            <div class="col-sm-4">
+              
+              <div class="thumbnail text-center">
+                
+                <h1>
+                  <i class="fa fa-fw fa-link"></i><br /><small>URL incorreta</small>
+                </h1>
+                
+                <p class="lead">
+                  Talvez o link que te enviaram ou o link que você digitou
+                  esteja incorreto.
+                </p>
+                
+              </div>
+              
+            </div>
+            
+          </div>
+
+        </div>
+
+      </section>
+
+    </ui:define>
+
+  </ui:composition>
+
+</html>
+
