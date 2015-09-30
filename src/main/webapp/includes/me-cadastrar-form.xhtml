@@ -1,0 +1,316 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+  <ui:composition>
+
+    <!-- Guia de uso dos Forms: http://getbootstrap.com/css/#forms -->
+    <form class="form-me-cadastrar"
+          method="post" action="reservar" enctype="utf-8">
+
+      <div class="col-md-8">
+
+        <div class="form-group" id="cadastroNomeContainer">
+
+          <label for="cadastroNome">
+            Nome completo:
+          </label>
+
+          <div class="input-group">
+
+            <div class="input-group-addon">
+
+              <label for="cadastroNome">
+
+                <i class="fa fa-fw fa-user"></i>
+
+              </label>
+
+            </div>
+
+            <input type="text" class="form-control" 
+                   required="required" min="8" maxlength="64"
+                   id="cadastroNome" name="cadastroNome" />
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="col-md-4">
+
+        <div class="form-group">
+
+          <label class="control-label" for="cadastroSexo">
+            Sexo:
+          </label>
+
+          <div class="input-group">
+
+            <div class="input-group-addon">
+
+              <label for="cadastroSexo">
+
+                <i class="fa fa-fw fa-venus-mars"></i>
+
+              </label>
+
+            </div>
+
+            <select class="form-control" 
+                    required="required"
+                    id="cadastroSexo" name="cadastroSexo">
+              <option disabled="disabled" selected="true">
+                Selecionar...
+              </option>
+              <option value="f">
+                Feminino
+              </option>
+              <option value="m">
+                Masculino
+              </option>
+            </select>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="clearfix"></div>
+
+      <div class="col-md-4">
+
+        <div class="form-group" id="cadastroNascimentoContainer">
+
+          <label for="cadastroNascimento">
+            Data de Nascimento:
+          </label>
+
+          <div class="input-group">
+
+            <div class="input-group-addon">
+
+              <label for="cadastroNascimento">
+                <i class="fa fa-fw fa-calendar"></i>
+              </label>
+
+            </div>
+
+            <input type="text" class="form-control init-datepicker" 
+                   required="required"
+                   id="cadastroNascimento" name="cadastroNascimento" />
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="col-md-4">
+
+        <div class="form-group" id="cadastroCPFContainer">
+
+          <label for="cadastroCPF"
+                 title="Cadastro de Pessoa Física dos Cidadãos Brasileiros">
+            CPF:
+          </label>
+
+          <div class="input-group">
+
+            <div class="input-group-addon">
+
+              <label for="cadastroCPF">
+                <i class="fa fa-fw fa-barcode"></i>
+              </label>
+
+            </div>
+
+            <input type="text" class="form-control" 
+                   required="required"
+                   id="cadastroCPF" name="cadastroCPF" />
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="col-md-4">
+
+        <div class="form-group" id="cadastroRGContainer">
+
+          <label for="cadastroRG"
+                 title="Registro Geral dos Cidadãos Brasileiros">
+            RG:
+          </label>
+
+          <div class="input-group">
+
+            <div class="input-group-addon">
+
+              <label for="cadastroRG">
+                <i class="fa fa-fw fa-barcode"></i>
+              </label>
+
+            </div>
+
+            <input type="text" class="form-control" 
+                   required="required"
+                   id="cadastroRG" name="cadastroRG" />
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="clearfix"></div>
+
+      <div class="col-md-8">
+
+        <div class="form-group" id="cadastroEmailContainer">
+
+          <label for="cadastroEmail"
+                 title="Seu endereço de e-mail pessoal">
+            E-mail para contato e login:
+          </label>
+
+          <div class="input-group">
+
+            <div class="input-group-addon">
+
+              <label for="cadastroEmail">
+                <i class="fa fa-fw fa-envelope"></i>
+              </label>
+
+            </div>
+
+            <input type="email" class="form-control" 
+                   required="required"
+                   id="cadastroEmail" name="cadastroEmail" />
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="col-md-4">
+
+        <div class="form-group" id="cadastroSenhaContainer">
+
+          <label for="cadastroSenha"
+                 title="Defina sua senha para acesso a sua conta conosco">
+            Senha no Lebre Hotel:
+          </label>
+
+          <div class="input-group">
+
+            <div class="input-group-addon">
+
+              <label for="cadastroSenha">
+                <i class="fa fa-fw fa-lock"></i>
+              </label>
+
+            </div>
+
+            <input type="password" class="form-control" 
+                   required="required"
+                   id="cadastroSenha" name="cadastroSenha" />
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="clearfix"></div>
+
+      <div class="col-md-6">
+
+        <div class="form-group" id="cadastroNewsletterContainer">
+
+          <label title="Informes, promoções e ofertas exclusivas por e-mail">
+            Deseja receber Newsletter?
+          </label>
+
+          <div class="checkbox" style="margin: 0;">
+
+            <label>
+              <input type="checkbox" checked="true" 
+                     data-toggle="toggle" 
+                     data-on="&lt;i class='fa fa-check-circle'&gt;&lt;/i&gt; SIM" 
+                     data-off="&lt;i class='fa fa-times-circle'&gt;&lt;/i&gt; NÃO"
+                     id="cadastroNewsletter" name="cadastroNewsletter"  />
+              via e-mail
+            </label>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="col-md-6">
+
+        <div class="form-group" id="cadastroTermoContainer">
+
+          <label>
+            Aceita nossa
+            <a href="#{request.contextPath}/politica-de-privacidade"
+               target="_blank"
+               >Política de Privacidade</a>?
+          </label>
+
+          <div class="checkbox" style="margin: 0;">
+
+            <label>
+              <input type="checkbox" checked="true" 
+                     required="required"
+                     data-toggle="toggle" 
+                     data-on="&lt;i class='fa fa-check-circle'&gt;&lt;/i&gt; SIM" 
+                     data-off="&lt;i class='fa fa-times-circle'&gt;&lt;/i&gt; NÃO"
+                     data-onstyle="success"
+                     id="cadastroTermo" name="cadastroTermo"  />
+              aceito a política de privacidade
+            </label>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="clearfix"></div>
+
+      <div class="row form-me-cadastrar-botoes">
+
+        <div class="col-md-2"></div>
+
+        <div class="col-md-4">
+
+          <button id="cadastroLimpar" type="reset" class="btn btn-block btn-link">
+            LIMPAR<i class="fa fa-fw fa-lg fa-eraser"></i>
+          </button>
+
+        </div>
+
+        <div class="col-md-4">
+
+          <button id="cadastroCadastrar" type="button" class="btn btn-block btn-primary disabled">
+            <i class="fa fa-fw fa-lg fa-check"></i>CADASTRAR
+          </button>
+
+        </div>
+
+      </div>
+
+    </form>
+
+  </ui:composition>
+
+</html>
+

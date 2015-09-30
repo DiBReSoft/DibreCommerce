@@ -53,17 +53,26 @@
         Redireciona para qualquer página nas primeiras pastas, sem a extensão .xhtml
         Exemplo: hoteis/sao-paulo-square
       </note>
-      <from>^/([A-Za-z0-9,-]+)$/([A-Za-z0-9,-]+)$</from>
+      <from>^/([A-Za-z0-9,-]+)/([A-Za-z0-9,-]+)$</from>
       <to type="forward" last="true">/$1/$2.xhtml</to>
     </rule>
     
     <rule>
       <note>
-        Redireciona para qualquer página nas subpastas, sem a extensão .xhtml
+        Redireciona para qualquer página nas primeiras pastas, sem a extensão .xhtml
         Exemplo: hoteis/sao-paulo-square/quarto-luxo
       </note>
-      <from>^/([A-Za-z0-9,-]+)$/([A-Za-z0-9,-]+)$/([A-Za-z0-9,-]+)$</from>
+      <from>^/([A-Za-z0-9,-]+)/([A-Za-z0-9,-]+)/([A-Za-z0-9,-]+)$</from>
       <to type="forward" last="true">/$1/$2/$3.xhtml</to>
+    </rule>
+    
+    <rule>
+      <note>
+        Redireciona para qualquer página nas primeiras pastas, sem a extensão .xhtml
+        Exemplo: hoteis/sao-paulo-square/quarto-luxo/sei-la
+      </note>
+      <from>^/([A-Za-z0-9,-]+)/([A-Za-z0-9,-]+)/([A-Za-z0-9,-]+)/([A-Za-z0-9,-]+)$</from>
+      <to type="forward" last="true">/$1/$2/$3/$4.xhtml</to>
     </rule>
 
     <!--

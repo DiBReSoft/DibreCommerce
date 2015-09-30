@@ -5,7 +5,7 @@
 
   <ui:composition template="/WEB-INF/templates/template.xhtml">
 
-    <ui:define name="pagina-titulo">Me Cadastrar</ui:define>
+    <ui:define name="pagina-titulo">Login</ui:define>
 
     <ui:define name="pagina-conteudo">
 
@@ -15,7 +15,7 @@
         <div class="container">
 
           <h1>
-            Me cadastrar
+            Login
           </h1>
 
         </div>
@@ -27,21 +27,13 @@
 
         <div class="container">
 
-          <h1 style="margin-top: 0;">
-            Identificação
-          </h1>
-
-          <p class="lead">
-            Cadastre-se na rede de hotéis que mais surpreende no Brasil 
-            (não se preocupe, seus dados serão protegidos), aproveite promoções, 
-            ofertas exclusivas e agilize suas reservas.
-          </p>
-
           <div class="row">
 
-            <div class="col-md-2"></div>
+            <div class="col-md-4">
 
-            <div class="col-md-8">
+              <h1 style="margin-top: 0;">
+                Já possui cadastro
+              </h1>
 
               <div class="panel panel-primary">
 
@@ -49,13 +41,41 @@
 
                   <div class="hidden-sm hidden-xs" style="padding: 8px 0px;"></div>
 
-                  <ui:include src="/includes/me-cadastrar-form.xhtml" />
+                  <!-- Insere o formulário de login -->
+                  <ui:include src="/includes/login-form.xhtml" />
 
                 </div>
 
                 <div class="panel-footer text-center">
 
                   Lebre Hotel | Nos melhores locais
+
+                </div>
+
+              </div>
+
+            </div>
+
+            <div class="col-md-8">
+
+              <h1 style="margin-top: 0;">
+                Ainda não possuo cadastro
+              </h1>
+
+              <div class="panel panel-primary">
+
+                <div class="panel-body">
+
+                  <div class="hidden-sm hidden-xs" style="padding: 8px 0px;"></div>
+
+                  <!-- Insere o formulário de login -->
+                  <ui:include src="/includes/me-cadastrar-form.xhtml" />
+
+                </div>
+
+                <div class="panel-footer text-center">
+
+                  Junte-se aos hospedes mais satisfeitos do país
 
                 </div>
 
