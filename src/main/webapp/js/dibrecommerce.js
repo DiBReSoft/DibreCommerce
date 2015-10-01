@@ -17,15 +17,22 @@ $(document).ready(function () {
     var body = $("html, body");
     body.animate({scrollTop: 0}, '500', 'swing');
   });
-  
+
   var dataHoje = new Date();
   var dataMaximaNascimento = new Date();
   var dataMinimaNascimento = new Date();
   dataMaximaNascimento.setDate(dataHoje.getDate() - 6570);
   dataMinimaNascimento.setDate(dataHoje.getDate() - 36500);
-  
+
   /* Inicializa o Calendário nos campos de data */
   $(".init-datepicker").datepicker({
+    language: "pt-BR",
+    format: "dd/mm/yyyy"
+  });
+  /* Inicializa o Calendário nos campos de data */
+
+  /* Inicializa o Calendário nos campos de data */
+  $("#cadastroNascimento").datepicker({
     language: "pt-BR",
     format: "dd/mm/yyyy",
     startDate: (dataMinimaNascimento),
