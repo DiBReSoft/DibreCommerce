@@ -57,7 +57,8 @@ function comportamentoTooltip() {
   if (telaLargura > 467) {
     $("a[title], button[title], [title]").tooltip({
       container: 'body',
-      placement: 'bottom'
+      placement: 'bottom',
+      trigger: 'hover'
     });
   } else {
     $("a[title], button[title]").tooltip('destroy');

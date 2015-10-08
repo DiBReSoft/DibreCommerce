@@ -55,11 +55,15 @@ body {
   }
 }
 
-.navbar-nav.navbar-right li:last-child {
+.navbar-nav.navbar-right > li:last-child {
   margin-right: 15px;
 }
 .navbar-nav.navbar-right .navbar-btn {
   margin-left: 15px;
+}
+
+.navbar-nav.navbar-right .navbar-btn:last-of-type {
+  margin-left: -2px;
 }
 
 .navbar .navbar-btn.navbar-right {

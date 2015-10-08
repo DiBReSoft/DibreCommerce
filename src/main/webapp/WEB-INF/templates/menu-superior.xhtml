@@ -59,12 +59,34 @@
               </button>
             </li>
             <li>
-              <button class="navbar-btn btn btn-primary tooltip-bottom"
-                      data-toggle="modal" data-target="#login"
-                      title="Acesse sua conta para reservar ou gerenciar suas reservas">
-                Entrar
-                <i class="fa fa-fw fa-lg fa-user"></i>
-              </button>
+              <!-- Split button -->
+              <div class="btn-group">
+                <button type="button" class="btn btn-primary navbar-btn tooltip-bottom"
+                        data-toggle="modal" data-target="#login"
+                        title="Acesse sua conta para reservar ou gerenciar suas reservas">
+                  Entrar
+                  <i class="fa fa-fw fa-lg fa-user"></i>
+                </button>
+                <button type="button" class="btn btn-primary navbar-btn dropdown-toggle" 
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                        title="Outras Opções">
+                  <span class="caret"></span>
+                  <span class="sr-only">Outras Opções</span>
+                </button>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a href="#{request.contextPath}/me-cadastrar">
+                      Cadastre-se
+                    </a>
+                  </li>
+                  <li role="separator" class="divider"></li>
+                  <li>
+                    <a href="#{request.contextPath}/recuperar-senha">
+                      Recupere sua senha
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </li>
           </ul>
 
