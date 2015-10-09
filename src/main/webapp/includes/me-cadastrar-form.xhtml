@@ -1,13 +1,15 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">
 
   <ui:composition>
 
     <!-- Guia de uso dos Forms: http://getbootstrap.com/css/#forms -->
-    <form class="form-me-cadastrar" id="cadastroClienteForm"
-          method="post" action="reservar" enctype="utf-8">
+    <h:form class="form-me-cadastrar" id="cadastroClienteForm" enctype="utf-8">
 
       <div class="col-md-8">
 
@@ -29,10 +31,11 @@
 
             </div>
 
-            <input type="text" class="form-control" 
-                   required="required" min="8" maxlength="64"
-                   id="cadastroNome" name="cadastroNome"
-                   value="#{clienteBean.cliente.nome}"/>
+            <h:inputText styleClass="form-control cadastroNome" 
+                         required="" maxlength="64"
+                         id="cadastroNome"
+                         value="#{clienteBean.cliente.nome}"
+                         pt:placeholder="Ex.: João da Silva" />
 
           </div>
 
@@ -60,19 +63,14 @@
 
             </div>
 
-            <select class="form-control" 
-                    required="required"
-                    id="cadastroSexo" name="cadastroSexo">
-              <option value="" disabled="disabled" selected="selected">
-                Selecionar...
-              </option>
-              <option value="f">
-                Feminino
-              </option>
-              <option value="m">
-                Masculino
-              </option>
-            </select>
+            <h:selectOneMenu styleClass="form-control cadastroSexo"
+                             required=""
+                             id="cadastroSexo"
+                             value="#{clienteBean.cliente.sexo}">
+              <f:selectItem itemLabel="Selecionar..." itemValue="" itemDisabled="true" />
+              <f:selectItem itemLabel="Feminino" itemValue="f" />
+              <f:selectItem itemLabel="Masculino" itemValue="m" />
+            </h:selectOneMenu>
 
           </div>
 
@@ -100,9 +98,13 @@
 
             </div>
 
-            <input type="text" class="form-control" 
-                   required="required"
-                   id="cadastroNascimento" name="cadastroNascimento" />
+            <h:inputText styleClass="form-control cadastroNascimento"
+                         required=""
+                         id="cadastroNascimento"
+                         value="#{clienteBean.cliente.dt_nasc}"
+                         pt:placeholder="Ex.: 01/01/1970">  
+              <f:convertDateTime pattern="dd/MM/yyyy"/>
+            </h:inputText>
 
           </div>
 
@@ -129,9 +131,11 @@
 
             </div>
 
-            <input type="text" class="form-control" 
-                   required="required"
-                   id="cadastroCPF" name="cadastroCPF" />
+            <h:inputText styleClass="form-control cadastroCPF" 
+                         required=""
+                         id="cadastroCPF"
+                         value="#{clienteBean.cliente.cpf}"
+                         pt:placeholder="Ex.: 400.500.600-70" />
 
           </div>
 
@@ -158,9 +162,11 @@
 
             </div>
 
-            <input type="text" class="form-control" 
-                   required="required"
-                   id="cadastroRG" name="cadastroRG" />
+            <h:inputText styleClass="form-control cadastroRG" 
+                         required=""
+                         id="cadastroRG"
+                         value="#{clienteBean.cliente.rg}"
+                         pt:placeholder="Ex.: 10.200.300-4" />
 
           </div>
 
@@ -189,9 +195,12 @@
 
             </div>
 
-            <input type="email" class="form-control" 
-                   required="required"
-                   id="cadastroEmail" name="cadastroEmail" />
+            <h:inputText styleClass="form-control cadastroEmail" 
+                         pt:type="email"
+                         pt:placeholder="Ex.: voce@seuprovedor.com"
+                         required=""
+                         id="cadastroEmail"
+                         value="#{clienteBean.cliente.email}" />
 
           </div>
 
@@ -218,9 +227,11 @@
 
             </div>
 
-            <input type="password" class="form-control" 
-                   required="required"
-                   id="cadastroSenha" name="cadastroSenha" />
+            <h:inputSecret styleClass="form-control cadastroSenha" 
+                           required=""
+                           id="cadastroSenha"
+                           value="#{clienteBean.cliente.senha}"
+                           pt:placeholder="Ex.: eu@apelido" />
 
           </div>
 
@@ -241,11 +252,12 @@
           <div class="checkbox" style="margin: 0;">
 
             <label>
-              <input type="checkbox" checked="true" 
-                     data-toggle="toggle" 
-                     data-on="&lt;i class='fa fa-check-circle'&gt;&lt;/i&gt; SIM" 
-                     data-off="&lt;i class='fa fa-times-circle'&gt;&lt;/i&gt; NÃO"
-                     id="cadastroNewsletter" name="cadastroNewsletter"  />
+              <h:selectBooleanCheckbox styleClass="cadastroNewsletter"    
+                                       value="#{clienteBean.cliente.newsletter}"
+                                       pt:data-toggle="toggle"
+                                       pt:data-on="&lt;i class='fa fa-check-circle'&gt;&lt;/i&gt; SIM"
+                                       pt:data-off="&lt;i class='fa fa-times-circle'&gt;&lt;/i&gt; NÃO">
+              </h:selectBooleanCheckbox>
               via e-mail
             </label>
 
@@ -269,13 +281,15 @@
           <div class="checkbox" style="margin: 0;">
 
             <label>
-              <input type="checkbox" checked="true" 
-                     required="required"
-                     data-toggle="toggle" 
-                     data-on="&lt;i class='fa fa-check-circle'&gt;&lt;/i&gt; SIM" 
-                     data-off="&lt;i class='fa fa-times-circle'&gt;&lt;/i&gt; NÃO"
-                     data-onstyle="success"
-                     id="cadastroTermo" name="cadastroTermo"  />
+              <h:selectBooleanCheckbox styleClass="cadastroTermo"
+                                       required=""
+                                       value="#{clienteBean.cliente.privacidade}"                          
+                                       pt:checked="checked"
+                                       pt:data-toggle="toggle"
+                                       pt:data-on="&lt;i class='fa fa-check-circle'&gt;&lt;/i&gt; SIM"
+                                       pt:data-off="&lt;i class='fa fa-times-circle'&gt;&lt;/i&gt; NÃO"
+                                       pt:data-onstyle="success">
+              </h:selectBooleanCheckbox>
               aceito a política de privacidade
             </label>
 
@@ -301,15 +315,17 @@
 
         <div class="col-md-4">
 
-          <button id="cadastroCadastrar" type="submit" class="btn btn-block btn-primary">
-            <i class="fa fa-fw fa-lg fa-check"></i>CADASTRAR
-          </button>
+          <h:commandButton type="submit" id="cadastroCadastrar"
+                           styleClass="btn btn-block btn-primary"
+                           action="#{clienteBean.cadastrar()}"
+                           value="CADASTRAR">
+          </h:commandButton>
 
         </div>
 
       </div>
 
-    </form>
+    </h:form>
 
   </ui:composition>
 

@@ -14,7 +14,7 @@ import java.util.Date;
 public class Cliente {
   
   private String nome;
-  private char sexo;
+  private String sexo;
   private Date dt_nasc;
   private String cpf;
   private String rg;
@@ -31,11 +31,11 @@ public class Cliente {
     this.nome = nome;
   }
 
-  public char getSexo() {
+  public String getSexo() {
     return sexo;
   }
 
-  public void setSexo(char sexo) {
+  public void setSexo(String sexo) {
     this.sexo = sexo;
   }
 

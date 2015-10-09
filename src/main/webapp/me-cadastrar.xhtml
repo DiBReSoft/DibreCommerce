@@ -78,17 +78,17 @@
       <script type="text/javascript">
         $(document).ready(function () {
 
-          $("#cadastroNewsletter").bootstrapToggle();
+          $(".cadastroNewsletter").bootstrapToggle();
 
-          $('#cadastroRG').mask('**.999.999-*');
-          $('#cadastroCPF').mask('999.999.999-99');
-          $('#cadastroNascimento').mask('**/**/****');
+          $('.cadastroRG').mask('**.999.999-*');
+          $('.cadastroCPF').mask('999.999.999-99');
+          $('.cadastroNascimento').mask('**/**/****');
 
           // verificação de email
-          $("#cadastroEmail").focus(function () {
+          $(".cadastroEmail").focus(function () {
             $("#cadastroEmailContainer .input-group").removeClass("has-success");
           });
-          $("#cadastroEmail").blur(function () {
+          $(".cadastroEmail").blur(function () {
             var email = $("#cadastroEmail");
             if (email.val() !== "") {
               if (!(/^\w([\.-]?\w)*@\w([\.-]?\w)*(\.\w{2,3})$/.test(email.val()))) {
