@@ -17,21 +17,21 @@ import java.util.logging.Logger;
  *
  * @author luciano
  */
-public class ConectarBD {
+public class ConnectionFactory {
 
     public Statement stm;
     public ResultSet rs;
-    private String driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";//Esse é o nome do driver, que na internet você vai encontrar de varias maneiras, mas só esse resolveu meus problemas  
-    private String caminho = "jdbc:sqlserver://localhost:1433;databaseName=DB_DIBREINN";//se não for acessar localmente mude localhost pelo nome do servidor  
-    private String usuario = "sa";//esse usuário é um sysadmin ele tem todos os poderes, é bom que se crie um login e usuário a parte  
-    private String senha = "admin@123";
+    private String driver = "org.apache.derby.jdbc.ClientDriver";//Esse é o nome do driver, que na internet você vai encontrar de varias maneiras, mas só esse resolveu meus problemas  
+    private String caminho = "jdbc:derby://localhost:1527/dibrebd";//se não for acessar localmente mude localhost pelo nome do servidor  
+    private String usuario = "app";//esse usuário é um sysadmin ele tem todos os poderes, é bom que se crie um login e usuário a parte  
+    private String senha = "app";
     public Connection conn;
 
     public void openConection() {
         try {
             Class.forName(driver);
         } catch (ClassNotFoundException ex) {
-            Logger.getLogger(ConectarBD.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ConnectionFactory.class.getName()).log(Level.SEVERE, null, ex);
         }
         try {
             conn = DriverManager.getConnection(caminho, usuario, senha);

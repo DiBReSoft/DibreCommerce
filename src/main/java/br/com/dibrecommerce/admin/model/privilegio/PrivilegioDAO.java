@@ -1,7 +1,7 @@
 package br.com.dibrecommerce.admin.model.privilegio;
 
 import br.com.dibrecommerce.admin.model.privilegio.Privilegio;
-import br.com.dibrecommerce.persistencia.ConectarBD;
+import br.com.dibrecommerce.persistencia.ConnectionFactory;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -18,7 +18,7 @@ public class PrivilegioDAO {
 
   public void cadastrarPrivilegio(Privilegio priv) {
 
-    ConectarBD conexao = new ConectarBD();
+    ConnectionFactory conexao = new ConnectionFactory();
     PreparedStatement stmt = null;
 
     String sql = "INSERT INTO TB_PRIVILEGIO (STATUS, PRIVILEGIO) VALUES  (?,?)";
@@ -55,7 +55,7 @@ public class PrivilegioDAO {
 
   public void editarPrivilegio(Privilegio priv) {
 
-    ConectarBD conexao = new ConectarBD();
+    ConnectionFactory conexao = new ConnectionFactory();
     PreparedStatement stmt = null;
 
     String sql = "UPDATE TB_PRIVILEGIO SET STATUS = ?, PRIVILEGIO = ? "
@@ -98,7 +98,7 @@ public class PrivilegioDAO {
   public List<Privilegio> listarPrivilegios() {
     ResultSet rs = null;
 
-    ConectarBD conexao = new ConectarBD();
+    ConnectionFactory conexao = new ConnectionFactory();
     PreparedStatement stmt = null;
 
     List<Privilegio> lista = new ArrayList<>();
@@ -149,7 +149,7 @@ public class PrivilegioDAO {
 
     ResultSet rs = null;
 
-    ConectarBD conexao = new ConectarBD();
+    ConnectionFactory conexao = new ConnectionFactory();
     PreparedStatement stmt = null;
 
     String Query = "SELECT ID_PRIVILEGIO, STATUS, PRIVILEGIO "

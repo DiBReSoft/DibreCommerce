@@ -1,12 +1,12 @@
 package br.com.dibrecommerce.model.unidade;
 
-import br.com.dibrecommerce.model.pessoa.Endereco;
+
 
 /**
  *
  * @author Thiago
  */
-public class Unidade extends Endereco {
+public class Unidade {
 
   private int id;
   private int status;
