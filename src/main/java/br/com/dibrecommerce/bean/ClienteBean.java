@@ -14,8 +14,17 @@ import java.io.Serializable;
 public class ClienteBean implements Serializable {
 
   private Cliente cliente;
+
+  public Cliente getCliente() {
+    return cliente;
+  }
+
+  public void setCliente(Cliente cliente) {
+    this.cliente = cliente;
+  }
   
   public ClienteBean() {
+    cliente = new Cliente();
   }
   
   /* INCOMPLETO - ERRADO */
