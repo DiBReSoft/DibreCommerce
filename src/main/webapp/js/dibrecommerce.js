@@ -32,7 +32,7 @@ $(document).ready(function () {
   /* Inicializa o Calendário nos campos de data */
 
   /* Inicializa o Calendário nos campos de data */
-  $("#cadastroNascimento").datepicker({
+  $(".cadastroNascimento").datepicker({
     language: "pt-BR",
     format: "dd/mm/yyyy",
     startDate: (dataMinimaNascimento),

@@ -32,10 +32,12 @@
             </div>
 
             <h:inputText styleClass="form-control cadastroNome" 
-                         required="" maxlength="64"
+                         pt:required=""
                          id="cadastroNome"
                          value="#{clienteBean.cliente.nome}"
-                         pt:placeholder="Ex.: João da Silva" />
+                         pt:placeholder="Ex.: João da Silva">
+              <f:validateLength minimum="5" maximum="64"/>
+            </h:inputText>
 
           </div>
 
@@ -64,7 +66,7 @@
             </div>
 
             <h:selectOneMenu styleClass="form-control cadastroSexo"
-                             required=""
+                             pt:required=""
                              id="cadastroSexo"
                              value="#{clienteBean.cliente.sexo}">
               <f:selectItem itemLabel="Selecionar..." itemValue="" itemDisabled="true" />
@@ -99,7 +101,7 @@
             </div>
 
             <h:inputText styleClass="form-control cadastroNascimento"
-                         required=""
+                         pt:required=""
                          id="cadastroNascimento"
                          value="#{clienteBean.cliente.dt_nasc}"
                          pt:placeholder="Ex.: 01/01/1970">  
@@ -132,7 +134,7 @@
             </div>
 
             <h:inputText styleClass="form-control cadastroCPF" 
-                         required=""
+                         pt:required=""
                          id="cadastroCPF"
                          value="#{clienteBean.cliente.cpf}"
                          pt:placeholder="Ex.: 400.500.600-70" />
@@ -163,7 +165,7 @@
             </div>
 
             <h:inputText styleClass="form-control cadastroRG" 
-                         required=""
+                         pt:required=""
                          id="cadastroRG"
                          value="#{clienteBean.cliente.rg}"
                          pt:placeholder="Ex.: 10.200.300-4" />
@@ -198,7 +200,7 @@
             <h:inputText styleClass="form-control cadastroEmail" 
                          pt:type="email"
                          pt:placeholder="Ex.: voce@seuprovedor.com"
-                         required=""
+                         pt:required=""
                          id="cadastroEmail"
                          value="#{clienteBean.cliente.email}" />
 
@@ -228,7 +230,7 @@
             </div>
 
             <h:inputSecret styleClass="form-control cadastroSenha" 
-                           required=""
+                           pt:required=""
                            id="cadastroSenha"
                            value="#{clienteBean.cliente.senha}"
                            pt:placeholder="Ex.: eu@apelido" />
@@ -282,7 +284,7 @@
 
             <label>
               <h:selectBooleanCheckbox styleClass="cadastroTermo"
-                                       required=""
+                                       pt:required=""
                                        value="#{clienteBean.cliente.privacidade}"                          
                                        pt:checked="checked"
                                        pt:data-toggle="toggle"

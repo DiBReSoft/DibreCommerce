@@ -16,20 +16,17 @@ import java.util.logging.Logger;
  * @author luciano
  */
 public class ClienteDAO {
-  
-  
-  
-  
-  public int cadastrarCliente (Cliente cli){
+
+  public boolean cadastrarCliente(Cliente cli) {
     ConnectionFactory conexao = new ConnectionFactory();
     PreparedStatement stmt = null;
-    String sql = "INSERT INTO APP.TB_CLIENTE (NM_CLIENTE, SEXO_CLIENTE, DT_NASC_CLIENTE, CPF_CLIENTE, RG_CLIENTE, EMAIL_CLIENTE, SENHA_CLIENTE, NEWSLETTER, PRIVACIDADE, DT_CADASTRO) \n" +
-"	VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, CURRENT_TIMESTAMP)";
-    
+    String sql = "INSERT INTO APP.TB_CLIENTE (NM_CLIENTE, SEXO_CLIENTE, DT_NASC_CLIENTE, CPF_CLIENTE, RG_CLIENTE, EMAIL_CLIENTE, SENHA_CLIENTE, NEWSLETTER, PRIVACIDADE, DT_CADASTRO) \n"
+	    + "	VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, CURRENT_TIMESTAMP)";
+
     try {
       conexao.openConection();
       stmt = conexao.conn.prepareStatement(sql);
-      
+
       stmt.setString(1, cli.getNome());
       stmt.setString(2, cli.getSexo());
       java.sql.Date sqlDataNasc = new java.sql.Date(cli.getDt_nasc().getTime());
@@ -40,29 +37,29 @@ public class ClienteDAO {
       stmt.setString(7, cli.getSenha());
       stmt.setBoolean(8, cli.isNewsletter());
       stmt.setBoolean(9, cli.isPrivacidade());
-      
+
       stmt.executeUpdate();
-      
+
     } catch (SQLException ex) {
-            Logger.getLogger(ClienteDAO.class.getName()).log(Level.SEVERE, null, ex);
-            return 0;
-        } finally {
-            if (stmt != null) {
-                try {
-                    stmt.close();
-                } catch (SQLException ex) {
-                    Logger.getLogger(ClienteDAO.class.getName()).log(Level.SEVERE, null, ex);
-                }
-            }
-            if (conexao.conn != null) {
-                try {
-                    conexao.conn.close();
-                } catch (SQLException ex) {
-                    Logger.getLogger(ClienteDAO.class.getName()).log(Level.SEVERE, null, ex);
-                }
-            }
-        }
-        return 1;
-  } 
-  
+      Logger.getLogger(ClienteDAO.class.getName()).log(Level.SEVERE, null, ex);
+      return false;
+    } finally {
+      if (stmt != null) {
+	try {
+	  stmt.close();
+	} catch (SQLException ex) {
+	  Logger.getLogger(ClienteDAO.class.getName()).log(Level.SEVERE, null, ex);
+	}
+      }
+      if (conexao.conn != null) {
+	try {
+	  conexao.conn.close();
+	} catch (SQLException ex) {
+	  Logger.getLogger(ClienteDAO.class.getName()).log(Level.SEVERE, null, ex);
+	}
+      }
+    }
+    return true;
+  }
+
 }

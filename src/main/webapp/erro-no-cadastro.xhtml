@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+  <ui:composition template="/WEB-INF/templates/template.xhtml">
+
+    <ui:define name="pagina-titulo">Erro ao tentar cadastrar</ui:define>
+
+    <ui:define name="pagina-conteudo">
+
+      <!-- TOPO, COM O TÍTULO DA PÁGINA -->
+      <header class="header-generico bg-warning">
+
+        <div class="container">
+
+          <h1>
+            Erro ao tentar cadastrar
+          </h1>
+
+        </div>
+
+      </header>
+      <!-- TOPO, COM O TÍTULO DA PÁGINA -->
+
+      <section>
+
+        <div class="container">
+
+          <h1 style="margin-top: 0; margin-bottom: 25px;" class="text-warning">
+            Algo não está certo...
+          </h1>
+
+          <p class="lead">
+            Puxa, nos desculpe.
+          </p>
+
+          <p class="lead">
+            Houve algum problema em nosso sistema que não possibilitou o seu
+            cadastro neste momento.
+          </p>
+
+          <p class="lead">
+            Sabemos do tamanho incômodo que isso possa estar te causando, mas
+            não se preocupe.
+            <br />
+            O nosso setor de suporte foi acionado por e-mail
+            para verificar o que de fato aconteceu e então irão lhe contatar para
+            informar o sucesso em seu cadastro.
+          </p>
+          
+          <p class="lead">
+            Mas caso você não queira aguardar, pode tentar mais uma vez, pois
+            talvez tenha sido uma falha momentânea imprevista.
+          </p>
+
+        </div>
+
+      </section>
+
+    </ui:define>
+
+    <ui:define name="pagina-bottom">
+
+      <!-- Adiciona JS e outros que vão no final da página -->
+
+    </ui:define>
+
+  </ui:composition>
+
+</html>
+
