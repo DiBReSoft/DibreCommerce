@@ -13,6 +13,7 @@ import java.util.Date;
  */
 public class Cliente {
   
+  private int id;
   private String nome;
   private String sexo;
   private Date dt_nasc;
@@ -23,6 +24,14 @@ public class Cliente {
   private boolean newsletter;
   private boolean privacidade;
 
+  public int getId() {
+    return id;
+  }
+
+  public void setId(int id) {
+    this.id = id;
+  }
+  
   public String getNome() {
     return nome;
   }
