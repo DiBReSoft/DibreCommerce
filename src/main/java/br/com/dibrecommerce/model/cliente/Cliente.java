@@ -23,6 +23,7 @@ public class Cliente {
   private String senha;
   private boolean newsletter;
   private boolean privacidade;
+  private boolean status;
 
   public int getId() {
     return id;
@@ -103,6 +104,16 @@ public class Cliente {
   public void setPrivacidade(boolean privacidade) {
     this.privacidade = privacidade;
   }
+
+  public boolean isStatus() {
+    return status;
+  }
+
+  public void setStatus(boolean status) {
+    this.status = status;
+  }
+  
+ 
   
   
   
