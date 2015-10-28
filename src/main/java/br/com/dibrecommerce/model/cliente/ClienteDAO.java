@@ -5,10 +5,11 @@
  */
 package br.com.dibrecommerce.model.cliente;
 
-import br.com.dibrecommerce.persistencia.ConectarBD;
 import br.com.dibrecommerce.persistencia.ConnectionFactory;
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -102,50 +103,54 @@ public class ClienteDAO {
     return true;
   }
   
-  public boolean editarCliente(Cliente c) {
-
-        ConnectionFactory conexao = new ConnectionFactory();
-        PreparedStatement stmt = null;
-
-        String sql = "UPDATE TB_CLINTE SET NM_CLIENTE = ?, SEXO_CLIENTE = ?, DT_NASC_CLIENTE = ?, "
-                + "SENHA=?, NEWSLETTER = ? \n"
-                + "WHERE ID_PESSOA = ? \n";
-
-        try {
-            conexao.openConection();
-            stmt = conexao.conn.prepareStatement(sql);
-
-            stmt.setString(1, c.getNome());
-            stmt.setString(2, c.getSexo());
-            java.sql.Date sqlDataNasc = new java.sql.Date(c.getDt_nasc().getTime());
-            stmt.setDate(3, sqlDataNasc);
-            stmt.setBoolean(4, c.isNewsletter());
-            
-
-            stmt.executeUpdate();
-            System.out.println("Dados Alterados com sucesso!!!");
-
-        } catch (SQLException ex) {
-            Logger.getLogger(ClienteDAO.class.getName()).log(Level.SEVERE, null, ex);
-            System.out.println("Erro ao alterar os dados");
-            return false;
-        } finally {
-            if (stmt != null) {
-                try {
-                    stmt.close();
-                } catch (SQLException ex) {
-                    Logger.getLogger(ClienteDAO.class.getName()).log(Level.SEVERE, null, ex);
-                }
-            }
-            if (conexao.conn != null) {
-                try {
-                    conexao.conn.close();
-                } catch (SQLException ex) {
-                    Logger.getLogger(ClienteDAO.class.getName()).log(Level.SEVERE, null, ex);
-                }
-            }
-        }
-        return true;
-    }
+//  public boolean editarCliente(Cliente c, int id) {
+//
+//        ConnectionFactory conexao = new ConnectionFactory();
+//        PreparedStatement stmt = null;
+//
+//        String sql = "UPDATE TB_CLIENTE SET NM_CLIENTE = ?, SEXO_CLIENTE = ?, DT_NASC_CLIENTE = ?, "
+//                + "SENHA_CLIENTE=?, NEWSLETTER = ? \n"
+//                + "WHERE ID_CLIENTE = ? \n";
+//
+//        try {
+//            conexao.openConection();
+//            stmt = conexao.conn.prepareStatement(sql);
+//
+//            stmt.setString(1, c.getNome());
+//            stmt.setString(2, c.getSexo());
+//            java.sql.Date sqlDataNasc;
+//	    SimpleDateFormat sdf = new SimpleDateFormat("28/11/1988");
+//	    sqlDataNasc = sdf.parse('1988-11-28');
+//            stmt.setDate(3, sqlDataNasc);
+//	    stmt.setString(4,c.getSenha());
+//            stmt.setBoolean(5, c.isNewsletter());
+//	    stmt.setInt(6,id);
+//            
+//
+//            stmt.executeUpdate();
+//            System.out.println("Dados Alterados com sucesso!!!");
+//
+//        } catch (SQLException ex) {
+//            Logger.getLogger(ClienteDAO.class.getName()).log(Level.SEVERE, null, ex);
+//            System.out.println("Erro ao alterar os dados");
+//            return false;
+//        } finally {
+//            if (stmt != null) {
+//                try {
+//                    stmt.close();
+//                } catch (SQLException ex) {
+//                    Logger.getLogger(ClienteDAO.class.getName()).log(Level.SEVERE, null, ex);
+//                }
+//            }
+//            if (conexao.conn != null) {
+//                try {
+//                    conexao.conn.close();
+//                } catch (SQLException ex) {
+//                    Logger.getLogger(ClienteDAO.class.getName()).log(Level.SEVERE, null, ex);
+//                }
+//            }
+//        }
+//        return true;
+//    }
 
 }
